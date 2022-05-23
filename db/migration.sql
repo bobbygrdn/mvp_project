@@ -27,17 +27,20 @@ CREATE TABLE exercise (
     instructions TEXT NOT NULL,
     equipment_needed TEXT NOT NULL,
     exercise_history TEXT,
-    set_goal TEXT
+    set_goal TEXT,
+    list_id INT
 );
 
 CREATE TABLE workout_plans (
     plan_id INT NOT NULL UNIQUE,
     plan_name TEXT NOT NULL,
     type_of_plan TEXT,
-    length_of_plan TEXT NOT NULL
+    length_of_plan TEXT NOT NULL,
+    workout_id INT
 );
 
 CREATE TABLE exercise_list (
     list_id INT NOT NULL UNIQUE,
-    exercise_name VARCHAR(50)
+    exercise_name VARCHAR(50),
+    exercise_id INT
 );
