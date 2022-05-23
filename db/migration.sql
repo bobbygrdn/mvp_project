@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS exercise_list;
 DROP TABLE IF EXISTS exercise;
 
 CREATE TABLE workout (
-    workout_id INT NOT NULL UNIQUE,
+    workout_id SERIAL PRIMARY KEY,
     exercise_name VARCHAR(50),
     sets INT,
     reps_time TEXT,
@@ -13,14 +13,14 @@ CREATE TABLE workout (
 );
 
 CREATE TABLE calendar (
-    calendar_id INT NOT NULL UNIQUE,
+    calendar_id SERIAL PRIMARY KEY,
     month INT NOT NULL,
     day INT NOT NULL,
     year INT NOT NULL
 );
 
 CREATE TABLE exercise (
-    exercise_id INT NOT NULL UNIQUE,
+    exercise_id SERIAL PRIMARY KEY,
     exercise_name VARCHAR(20) NOT NULL,
     type_of VARCHAR(20) NOT NULL,
     muscle_group TEXT NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE exercise (
 );
 
 CREATE TABLE workout_plans (
-    plan_id INT NOT NULL UNIQUE,
+    plan_id SERIAL PRIMARY KEY,
     plan_name TEXT NOT NULL,
     type_of_plan TEXT,
     length_of_plan TEXT NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE workout_plans (
 );
 
 CREATE TABLE exercise_list (
-    list_id INT NOT NULL UNIQUE,
+    list_id SERIAL PRIMARY KEY,
     exercise_name VARCHAR(50),
     exercise_id INT
 );
