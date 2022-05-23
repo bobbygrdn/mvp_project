@@ -8,7 +8,7 @@ CREATE TABLE workout (
     workout_id INT NOT NULL UNIQUE,
     exercise_name VARCHAR(50),
     sets INT,
-    reps/time TEXT,
+    reps_time TEXT,
     rest_cycle TEXT
 );
 
@@ -27,20 +27,17 @@ CREATE TABLE exercise (
     instructions TEXT NOT NULL,
     equipment_needed TEXT NOT NULL,
     exercise_history TEXT,
-    set_goal TEXT,
-    CONSTRAINT fk_exercise_list FOREIGN KEY(list_id) REFERENCES exercise_list(list_id)
+    set_goal TEXT
 );
 
 CREATE TABLE workout_plans (
     plan_id INT NOT NULL UNIQUE,
     plan_name TEXT NOT NULL,
     type_of_plan TEXT,
-    length_of_plan TEXT NOT NULL,
-    CONSTRAINT fk_workout FOREIGN KEY(workout_id) REFERENCES workout(workout_id)
+    length_of_plan TEXT NOT NULL
 );
 
 CREATE TABLE exercise_list (
     list_id INT NOT NULL UNIQUE,
-    exercise_name VARCHAR(50),
-    CONSTRAINT fk_exercise FOREIGN KEY(exercise_id) REFERENCES exercise(exercise_id)
+    exercise_name VARCHAR(50)
 );
