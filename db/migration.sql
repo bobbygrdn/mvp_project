@@ -21,6 +21,7 @@ CREATE TABLE calendar (
 
 CREATE TABLE exercise (
     exercise_id INT NOT NULL UNIQUE,
+    exercise_name VARCHAR(20) NOT NULL,
     type_of VARCHAR(20) NOT NULL,
     muscle_group TEXT NOT NULL,
     reps_time_interval TEXT,
