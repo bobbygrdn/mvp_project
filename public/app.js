@@ -42,7 +42,7 @@ const buttonDev = () => {
     });
 
     profile.addEventListener('click', () => {
-        user.style.classList = "block";
+        user.style.display = "block";
         currentplan.style.display = "block";
         workouts.style.display= "block";
         history.style.display="none";
