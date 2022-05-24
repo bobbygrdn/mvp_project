@@ -48,7 +48,7 @@ const getData = () => {
             <div class='first'>
             <h2>${data.workout_id}</h2>
             <h3>${data.exercise_name}</h3>
-            <h3>Sets:${data.sets} X Reps:${reps_time}</h3>
+            <h3>Sets:${data.sets} X Reps:${data.reps_time}</h3>
             <h3>Rest:${data.rest_cycle}</h3>
             `;
 
