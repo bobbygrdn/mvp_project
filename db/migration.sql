@@ -37,7 +37,7 @@ CREATE TABLE workout_plans (
     plan_name TEXT NOT NULL,
     type_of_plan TEXT,
     length_of_plan TEXT NOT NULL,
-    workout_id INT
+    plan_id INT
 );
 
 CREATE TABLE exercise_list (
