@@ -19,4 +19,3 @@ INSERT INTO workout('exercise_name', 'sets', 'reps_time', 'rest_cycle') VALUES('
 INSERT INTO workout('exercise_name', 'sets', 'reps_time', 'rest_cycle') VALUES('Leg Raise', 4, '12', '30 Seconds');
 
 INSERT INTO workout_plans('plan_name', 'type_of_plan', 'length_of_plan') VALUES ('Strength Trainng', 'Strength', '5 Days')
-
