@@ -116,5 +116,5 @@ h2 {
 }
 
 .current {
-    display: inline-block;
+    display: flex;
 }
