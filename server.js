@@ -26,20 +26,18 @@ app.get("/api/calendar", async (req,res) => {
 
 app.get("/api/calendar/:id", async (req,res) => {
     let id = req.params.id;
-    console.log(res.body)
-    // if(obj === undefined) {
-    //     res.statusCode = 404
-    //     res.header('Content-Type', 'text/plain');
-    //     res.send('Could Not Find')
-    // } else {
-        try {
-            const data = await pool.query('SELECT * FROM calendar;')
-            res.send(data.rows[id]);
-        } catch (err) {
-            console.error(err.message)
+    try {
+        const data = await pool.query('SELECT * FROM calendar;')
+        if(id >= data.rows.length) {
+            res.statusCode = 404;
+            res.header('Content-Type', 'text/plain');
+            res.end("Could Not Find Date")
         }
-    // }
-
+        res.send(data.rows[id]);
+    } catch (err) {
+        console.error(err.message)
+    }
+    
 })
 
 app.get("/api/workout", async (req,res) => {
@@ -55,6 +53,11 @@ app.get("/api/workout/:id", async (req,res) => {
     let id = req.params.id;
     try {
         const data = await pool.query('SELECT * FROM workout;')
+        if(id >= data.rows.length) {
+            res.statusCode = 404;
+            res.header('Content-Type', 'text/plain');
+            res.end("Could Not Find workout")
+        }
         res.send(data.rows[id]);
     } catch (err) {
         console.error(err.message)
@@ -74,6 +77,11 @@ app.get("/api/exercise/:id", async (req,res) => {
     let id = req.params.id;
     try {
         const data = await pool.query('SELECT * FROM exercise;')
+        if(id >= data.rows.length) {
+            res.statusCode = 404;
+            res.header('Content-Type', 'text/plain');
+            res.end("Could Not Find exercise")
+        }
         res.send(data.rows[id]);
     } catch (err) {
         console.error(err.message)
@@ -93,6 +101,11 @@ app.get("/api/workout_plans/:id", async (req,res) => {
     let id = req.params.id;
     try {
         const data = await pool.query('SELECT * FROM workout_plans;')
+        if(id >= data.rows.length) {
+            res.statusCode = 404;
+            res.header('Content-Type', 'text/plain');
+            res.end("Could Not Find Plan")
+        }
         res.send(data.rows[id]);
     } catch (err) {
         console.error(err.message)
@@ -112,6 +125,11 @@ app.get("/api/exercise_list/:id", async (req,res) => {
     let id = req.params.id;
     try {
         const data = await pool.query('SELECT * FROM exercise_list;')
+        if(id >= data.rows.length) {
+            res.statusCode = 404;
+            res.header('Content-Type', 'text/plain');
+            res.end("Could Not Find Exercise")
+        }
         res.send(data.rows[id]);
     } catch (err) {
         console.error(err.message)
