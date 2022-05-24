@@ -83,6 +83,16 @@ app.patch("/api/calendar/:id", async (req,res) => {
     }
 })
 
+app.delete("/api/calendar/:id", async (req,res) => {
+    let id = req.params.id;
+    try {
+        const data = await pool.query(`DELETE FROM calendar WHERE calendar_id = '${id}'`)
+        res.send("Deleted Date")
+    } catch (err) {
+        console.error(err.message)
+    }
+})
+
 app.get("/api/workout", async (req,res) => {
     try {
         const data = await pool.query('SELECT * FROM workout;')
@@ -155,6 +165,16 @@ app.patch("/api/workout/:id", async (req,res) => {
         } catch (err) {
             console.error(err.message)
         }
+    }
+})
+
+app.delete("/api/workout/:id", async (req,res) => {
+    let id = req.params.id;
+    try {
+        const data = await pool.query(`DELETE FROM workout WHERE workout_id = '${id}'`)
+        res.send("Deleted Exercise")
+    } catch (err) {
+        console.error(err.message)
     }
 })
 
@@ -254,6 +274,16 @@ app.patch("/api/exercise/:id", async (req,res) => {
     } 
 })
 
+app.delete("/api/exercise/:id", async (req,res) => {
+    let id = req.params.id;
+    try {
+        const data = await pool.query(`DELETE FROM exercise WHERE exercise_id = '${id}'`)
+        res.send("Deleted Exercise")
+    } catch (err) {
+        console.error(err.message)
+    }
+})
+
 app.get("/api/workout_plans", async (req,res) => {
     try {
         const data = await pool.query('SELECT * FROM workout_plans;')
@@ -323,6 +353,16 @@ app.patch("/api/workout_plans/:id", async (req,res) => {
     } 
 })
 
+app.delete("/api/workout_plans/:id", async (req,res) => {
+    let id = req.params.id;
+    try {
+        const data = await pool.query(`DELETE FROM workout_plans WHERE plan_id = '${id}'`)
+        res.send("Deleted Plan")
+    } catch (err) {
+        console.error(err.message)
+    }
+})
+
 app.get("/api/exercise_list", async (req,res) => {
     try {
         const data = await pool.query('SELECT * FROM exercise_list;')
@@ -375,6 +415,16 @@ app.patch("/api/exercise_list/:id", async (req,res) => {
             console.error(err.message)
         }
     } 
+})
+
+app.delete("/api/exercise_list/:id", async (req,res) => {
+    let id = req.params.id;
+    try {
+        const data = await pool.query(`DELETE FROM exercise_list WHERE list_id = '${id}'`)
+        res.send("Deleted Exercise")
+    } catch (err) {
+        console.error(err.message)
+    }
 })
 
 app.listen(port, () => {
