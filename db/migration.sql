@@ -21,8 +21,8 @@ CREATE TABLE calendar (
 
 CREATE TABLE exercise (
     exercise_id SERIAL PRIMARY KEY,
-    exercise_name VARCHAR(20) NOT NULL,
-    type_of VARCHAR(20) NOT NULL,
+    exercise_name VARCHAR(50) NOT NULL,
+    type_of VARCHAR(50) NOT NULL,
     muscle_group TEXT NOT NULL,
     reps_time_interval TEXT,
     instructions TEXT NOT NULL,
