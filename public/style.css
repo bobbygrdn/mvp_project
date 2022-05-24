@@ -11,9 +11,13 @@
     width: auto;
     background-color: black;
     color: whitesmoke;
+    border-radius: 5px;
 }
 
-.button {
+.calendar,
+.list,
+.plans,
+.profile {
     color: white;
     width: 20%;
     height: 10%;
@@ -25,7 +29,10 @@
     transition: all 0.5s ease;
 }
 
-.button:hover {
+.calendar:hover,
+.list:hover,
+.plans:hover,
+.profile:hover {
     color:black;
     background: white;
 }
@@ -38,6 +45,10 @@
     border-radius: 5px;
 }
 
+h1 {
+    margin: 10px;
+}
+
 h2 {
     color: blue;
 }
@@ -48,6 +59,8 @@ h2 {
 .bmi {
     display: inline-flex;
     height: 2em;
+    border: 1px solid black;
+    margin: 0 auto;
 }
 
 .currentplan {
