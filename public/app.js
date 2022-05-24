@@ -27,7 +27,16 @@ const getData = () => {
     let html = '';
     fetch(url)
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => {
+        let htmlSegment = `
+        <div class='current'>
+        <h2>${data.plan_name}</h2>
+        <h3>${data.type_of_plan}</h3>
+        <h3>${data.length_of_plan}</h3>`;
+
+        html+=htmlSegment;
+        currentplan.innerHTML = html;
+    });
 }
 
 startUp();
