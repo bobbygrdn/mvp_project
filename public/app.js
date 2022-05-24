@@ -18,7 +18,7 @@ const buttonDev = () => {
         user.style.display = "none";
         currentplan.style.display = "none";
         workouts.style.display= "none";
-        history.style.display="inline-flex";
+        history.style.display="block";
         const calendarurl = 'https://desolate-reef-75349.herokuapp.com/api/calendar/';
     let calendarhtml = '';
     fetch(calendarurl)

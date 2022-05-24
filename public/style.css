@@ -114,3 +114,7 @@ h2 {
     background-color: whitesmoke;
     display: none;
 }
+
+.current {
+    display: inline-block;
+}
