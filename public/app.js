@@ -38,18 +38,22 @@ const getData = () => {
         currentplan.innerHTML = planhtml;
     });
 
-    const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workouts/';
+    const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workout/';
     let workouthtml = '';
     fetch(workouturl)
     .then(response => response.json())
     .then(data => {
-        let htmlSegment = `
+        data.forEach(data => {
+            let htmlSegment = `
             <div class='first'>
-            <h2>${data.plan_name}</h2>
-            <h3>${data.type_of_plan}</h3>
-            <h3>${data.length_of_plan}</h3>`;
+            <h2>${data.workout_id}</h2>
+            <h3>${data.exercise_name}</h3>
+            <h3>Sets:${data.sets} X Reps:${reps_time}</h3>
+            <h3>Rest:${data.rest_cycle}</h3>
+            `;
 
-        workouthtml += htmlSegment;
+            workouthtml += htmlSegment;
+        })
         workouts.innerHTML = workouthtml;
     });
 
