@@ -42,9 +42,10 @@ const buttonDev = () => {
     });
 
     profile.addEventListener('click', () => {
-        user.style.display = "block";
-        currentplan.style.display = "block";
-        workouts.style.display= "block";
+        user.style.display = "";
+        currentplan.style.display = "";
+        workouts.style.display= "";
+        history.style.display="none";
     })
 };
 
