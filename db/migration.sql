@@ -9,7 +9,8 @@ CREATE TABLE workout (
     exercise_name VARCHAR(50),
     sets INT,
     reps_time TEXT,
-    rest_cycle TEXT
+    rest_cycle TEXT,
+    plan_id INT
 );
 
 CREATE TABLE calendar (
@@ -36,8 +37,7 @@ CREATE TABLE workout_plans (
     plan_id SERIAL PRIMARY KEY,
     plan_name TEXT NOT NULL,
     type_of_plan TEXT,
-    length_of_plan TEXT NOT NULL,
-    plan_id INT
+    length_of_plan TEXT NOT NULL
 );
 
 CREATE TABLE exercise_list (
