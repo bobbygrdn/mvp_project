@@ -19,27 +19,34 @@ const buttonDev = () => {
         currentplan.style.display = "none";
         workouts.style.display= "none";
         history.style.display="block";
+
         const calendarurl = 'https://desolate-reef-75349.herokuapp.com/api/calendar/';
-    let calendarhtml = '';
-    fetch(calendarurl)
-    .then(response => response.json())
-    .then(data => {
-        data.forEach(data => {
-            let htmlSegment = `
-            <div class='current'>
-            <h2>${data.calendar_id}</h2>
-            <h3>${data.month}</h3>
-            <h3>${data.day}</h3>
-            <h3>${data.year}</h3>
-            `;
+        let calendarhtml = '';
 
-            calendarhtml += htmlSegment;
-        })
-        history.innerHTML = calendarhtml;
+        fetch(calendarurl)
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(data => {
+                let htmlSegment = `
+                <div class='current'>
+                <h2>${data.calendar_id}</h2>
+                <h3>${data.month}</h3>
+                <h3>${data.day}</h3>
+                <h3>${data.year}</h3>
+                `;
 
+                calendarhtml += htmlSegment;
+            });
+            history.innerHTML = calendarhtml;
+        });
     });
+
+    profile.addEventListener('click', () => {
+        user.style.display = "block";
+        currentplan.style.display = "block";
+        workouts.style.display= "block";
     })
-}
+};
 
 const getData = () => {
     const planurl = 'https://desolate-reef-75349.herokuapp.com/api/workout_plans/0';
