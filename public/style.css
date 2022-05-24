@@ -117,4 +117,6 @@ h2 {
 
 .current {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
