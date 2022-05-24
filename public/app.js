@@ -23,16 +23,11 @@ const buttonDev = () => {
 }
 
 const getData = () => {
-    const url = '';
+    const url = 'https://desolate-reef-75349.herokuapp.com/api/calendar';
     let html = '';
     fetch(url)
-    .then(response => {
-        console.log(response)
-        // `<div class="current">`
-    })
-    .catch(error => {
-        console.error(error);
-    })
+    .then(response => response.json())
+    .then(data => console.log(data));
 }
 
 startUp();
