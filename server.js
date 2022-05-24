@@ -37,7 +37,35 @@ app.get("/api/calendar/:id", async (req,res) => {
     } catch (err) {
         console.error(err.message)
     }
-    
+    })
+
+app.post("/api/calendar", async (req,res) => {
+    let obj = req.body;
+    if(obj.month === '' || obj.day === '' || obj.year === '') {
+        res.statusCode = 404;
+        res.header('Content-Type', 'text/plain');
+        res.end("Please insert Month, Day, Year")
+    } else {
+        try {
+            const data = await pool.query(`INSERT INTO calendar (month, day, year) VALUES('${obj.month}', '${obj.day}', '${obj.year}');`)
+            res.send('Date Created!');
+        } catch (err) {
+            console.error(err.message);
+        }
+    }
+})
+
+app.patch("/api/calendar/:id", async (req,res) => {
+    let id = req.params.id;
+    let obj = req.body;
+
+    if(obj.month) {
+        try {
+            
+        } catch (err) {
+            console.error(err.message)
+        }
+    }
 })
 
 app.get("/api/workout", async (req,res) => {
@@ -61,6 +89,22 @@ app.get("/api/workout/:id", async (req,res) => {
         res.send(data.rows[id]);
     } catch (err) {
         console.error(err.message)
+    }
+})
+
+app.post("/api/workout", async (req,res) => {
+    let obj = req.body;
+    if(obj.exercise_name === '' || obj.sets === '' || obj.reps_time === '' || obj.rest_cycle === '') {
+        res.statusCode = 404;
+        res.header('Content-Type', 'text/plain');
+        res.end("Please insert Name, Sets, Reps, Rest Cycle")
+    } else {
+        try {
+            const data = await pool.query(`INSERT INTO workout (exercise_name, sets, reps_time, rest_cycle) VALUES('${obj.exercise_name}', '${obj.sets}', '${obj.reps_time}', '${obj.reps_cycle}');`)
+            res.send('Exercise Created!');
+        } catch (err) {
+            console.error(err.message);
+        }
     }
 })
 
@@ -88,6 +132,22 @@ app.get("/api/exercise/:id", async (req,res) => {
     }
 })
 
+app.post("/api/exercise", async (req,res) => {
+    let obj = req.body;
+    if(obj.exercise_name === '' || obj.type_of === '' || obj.muscle_group === '' || obj.reps_time_interval === '' || obj.instructions === '' || obj.equipment_needed === '') {
+        res.statusCode = 404;
+        res.header('Content-Type', 'text/plain');
+        res.end("Please insert Name, Sets, Reps, Rest Cycle, Instructions, Equipment Needed")
+    } else {
+        try {
+            const data = await pool.query(`INSERT INTO exercise (exercise_name, type_of, muscle_group,reps_time_interval, instructions, equipment_needed) VALUES('${obj.exercise_name}', '${obj.type_of}', '${obj.muscle_group}', '${obj.reps_time_interval}', '${obj.instructions}', '${obj.equipment_needed}');`)
+            res.send('Exercise Created!');
+        } catch (err) {
+            console.error(err.message);
+        }
+    }
+})
+
 app.get("/api/workout_plans", async (req,res) => {
     try {
         const data = await pool.query('SELECT * FROM workout_plans;')
@@ -112,6 +172,23 @@ app.get("/api/workout_plans/:id", async (req,res) => {
     }
 })
 
+app.post("/api/workout_plans", async (req,res) => {
+    let obj = req.body;
+    if(obj.plan_name === '' || obj.type_of_plan === '' || obj.length_of_plan === '') {
+        res.statusCode = 404;
+        res.header('Content-Type', 'text/plain');
+        res.end("Please insert Name, Type, Length")
+    } else {
+        try {
+            const data = await pool.query(`INSERT INTO workout_plans (plan_name, type_of_plan, length_of_plan) VALUES('${obj.plan_name}', '${obj.type_of_plan}', '${obj.length_of_plan}');`)
+            res.send('Plan Created!');
+        } catch (err) {
+            console.error(err.message);
+        }
+    }
+
+})
+
 app.get("/api/exercise_list", async (req,res) => {
     try {
         const data = await pool.query('SELECT * FROM exercise_list;')
@@ -133,6 +210,22 @@ app.get("/api/exercise_list/:id", async (req,res) => {
         res.send(data.rows[id]);
     } catch (err) {
         console.error(err.message)
+    }
+})
+
+app.post("/api/exercise_list", async (req,res) => {
+    let obj = req.body;
+    if(obj.exercise_name === '') {
+        res.statusCode = 404;
+        res.header('Content-Type', 'text/plain');
+        res.end("Please insert Name")
+    } else {
+        try {
+            const data = await pool.query(`INSERT INTO exercise_list (exercise_name) VALUES('${obj.exercise_name}');`)
+            res.send('Exercise Created!');
+        } catch (err) {
+            console.error(err.message);
+        }
     }
 })
 
