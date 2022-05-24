@@ -13,7 +13,7 @@ const startUp = () => {
 }
 
 const buttonDev = () => {
-    calendar.addEventListener('click', (e) => {
+    calendar.addEventListener('click', () => {
         user.style.display = "none";
         currentplan.style.display = "none";
         workouts.style.display= "none";
@@ -23,7 +23,7 @@ const buttonDev = () => {
 }
 
 const getData = () => {
-    const url = 'https://desolate-reef-75349.herokuapp.com/api/calendar';
+    const url = 'https://desolate-reef-75349.herokuapp.com/api/workout_plans/0';
     let html = '';
     fetch(url)
     .then(response => response.json())
