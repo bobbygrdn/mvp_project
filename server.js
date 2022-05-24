@@ -61,7 +61,22 @@ app.patch("/api/calendar/:id", async (req,res) => {
 
     if(obj.month) {
         try {
-            
+            const data = await pool.query(`UPDATE calendar SET month = '${obj.month}' WHERE calendar_id = '${id}';`)
+            res.send("Updated Month");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } else if(obj.day) {
+        try {
+            const data = await pool.query(`UPDATE calendar SET day = '${obj.day}' WHERE calendar_id = '${id}';`)
+            res.send("Updated Day");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } else if(obj.year) {
+        try {
+            const data = await pool.query(`UPDATE calendar SET year = '${obj.year}' WHERE calendar_id = '${id}';`)
+            res.send("Updated Year");
         } catch (err) {
             console.error(err.message)
         }
@@ -108,6 +123,41 @@ app.post("/api/workout", async (req,res) => {
     }
 })
 
+app.patch("/api/workout/:id", async (req,res) => {
+    let id = req.params.id;
+    let obj = req.body;
+
+    if(obj.exercise_name) {
+        try {
+            const data = await pool.query(`UPDATE workout SET exercise_name = '${obj.exercise_name}' WHERE workout_id = '${id}';`)
+            res.send("Updated Name");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } else if(obj.sets) {
+        try {
+            const data = await pool.query(`UPDATE workout SET sets = '${obj.sets}' WHERE workout_id = '${id}';`)
+            res.send("Updated Sets");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } else if(obj.reps_time) {
+        try {
+            const data = await pool.query(`UPDATE workout SET reps_time = '${obj.reps_time}' WHERE workout_id = '${id}';`)
+            res.send("Updated Reps/Time");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } else if(obj.rest_cycle) {
+        try {
+            const data = await pool.query(`UPDATE workout SET rest_cycle = '${obj.rest_cycle}' WHERE workout_id = '${id}';`)
+            res.send("Updated Rest Cycle");
+        } catch (err) {
+            console.error(err.message)
+        }
+    }
+})
+
 app.get("/api/exercise", async (req,res) => {
     try {
         const data = await pool.query('SELECT * FROM exercise;')
@@ -146,6 +196,62 @@ app.post("/api/exercise", async (req,res) => {
             console.error(err.message);
         }
     }
+})
+
+app.patch("/api/exercise/:id", async (req,res) => {
+    let id = req.params.id;
+    let obj = req.body;
+
+    if(obj.exercise_name) {
+        try {
+            const data = await pool.query(`UPDATE exercise SET exercise_name = '${obj.exercise_name}' WHERE exercise_id = '${id}';`)
+            res.send("Updated Name");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } else if(obj.type_of) {
+        try {
+            const data = await pool.query(`UPDATE exercise SET type_of = '${obj.type_of}' WHERE exercise_id = '${id}';`)
+            res.send("Updated Type");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } else if(obj.muscle_group) {
+        try {
+            const data = await pool.query(`UPDATE exercise SET muscle_group = '${obj.muscle_group}' WHERE exercise_id = '${id}';`)
+            res.send("Updated Muscle Group");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } else if(obj.reps_time_interval) {
+        try {
+            const data = await pool.query(`UPDATE exercise SET reps_time_interval = '${obj.reps_time_interval}' WHERE exercise_id = '${id}';`)
+            res.send("Updated Reps/Time/interval");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } else if(obj.instructions) {
+        try {
+            const data = await pool.query(`UPDATE exercise SET instructions = '${obj.instructions}' WHERE exercise_id = '${id}';`)
+            res.send("Updated Instructions");
+        } catch (err) {
+            console.error(err.message)
+        }
+    }  else if(obj.equipment_needed) {
+        try {
+            const data = await pool.query(`UPDATE exercise SET equipment_needed = '${obj.equipment_needed}' WHERE exercise_id = '${id}';`)
+            res.send("Updated Equipment");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } else if(obj.set_goal) {
+        try {
+            const data = await pool.query(`UPDATE exercise SET set_goal = '${obj.set_goal}' WHERE exercise_id = '${id}';`)
+            res.send("Updated Goal");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } 
 })
 
 app.get("/api/workout_plans", async (req,res) => {
@@ -189,6 +295,34 @@ app.post("/api/workout_plans", async (req,res) => {
 
 })
 
+app.patch("/api/workout_plans/:id", async (req,res) => {
+    let id = req.params.id;
+    let obj = req.body;
+
+    if(obj.plan_name) {
+        try {
+            const data = await pool.query(`UPDATE workout_plans SET plan_name = '${obj.plan_name}' WHERE plan_id = '${id}';`)
+            res.send("Updated Name");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } else if(obj.type_of_plan) {
+        try {
+            const data = await pool.query(`UPDATE workout_plans SET type_of_plan = '${obj.type_of_plan}' WHERE plan_id = '${id}';`)
+            res.send("Updated Type");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } else if(obj.length_of_plan) {
+        try {
+            const data = await pool.query(`UPDATE workout_plans SET length_of_plan = '${obj.length_of_plan}' WHERE plan_id = '${id}';`)
+            res.send("Updated Length");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } 
+})
+
 app.get("/api/exercise_list", async (req,res) => {
     try {
         const data = await pool.query('SELECT * FROM exercise_list;')
@@ -227,6 +361,20 @@ app.post("/api/exercise_list", async (req,res) => {
             console.error(err.message);
         }
     }
+})
+
+app.patch("/api/exercise_list/:id", async (req,res) => {
+    let id = req.params.id;
+    let obj = req.body;
+
+    if(obj.exercise_name) {
+        try {
+            const data = await pool.query(`UPDATE exercise_list SET exercise_name = '${obj.exercise_name}' WHERE list_id = '${id}';`)
+            res.send("Updated Name");
+        } catch (err) {
+            console.error(err.message)
+        }
+    } 
 })
 
 app.listen(port, () => {
