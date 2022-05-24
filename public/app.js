@@ -30,6 +30,7 @@ const getData = () => {
     .then(data => {
         let htmlSegment = `
         <div class='current'>
+        <img src='./images/spartan.jpg'
         <h2>${data.plan_name}</h2>
         <h3>${data.type_of_plan}</h3>
         <h3>${data.length_of_plan}</h3>`;
