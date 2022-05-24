@@ -23,20 +23,36 @@ const buttonDev = () => {
 }
 
 const getData = () => {
-    const url = 'https://desolate-reef-75349.herokuapp.com/api/workout_plans/0';
-    let html = '';
-    fetch(url)
+    const planurl = 'https://desolate-reef-75349.herokuapp.com/api/workout_plans/0';
+    let planhtml = '';
+    fetch(planurl)
     .then(response => response.json())
     .then(data => {
         let htmlSegment = `
-        <div class='current'>
-        <h2>${data.plan_name}</h2>
-        <h3>${data.type_of_plan}</h3>
-        <h3>${data.length_of_plan}</h3>`;
+            <div class='current'>
+            <h2>${data.plan_name}</h2>
+            <h3>${data.type_of_plan}</h3>
+            <h3>${data.length_of_plan}</h3>`;
 
-        html+=htmlSegment;
-        currentplan.innerHTML = html;
+        planhtml+=htmlSegment;
+        currentplan.innerHTML = planhtml;
     });
+
+    const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workouts/';
+    let workouthtml = '';
+    fetch(workouturl)
+    .then(response => response.json())
+    .then(data => {
+        let htmlSegment = `
+            <div class='first'>
+            <h2>${data.plan_name}</h2>
+            <h3>${data.type_of_plan}</h3>
+            <h3>${data.length_of_plan}</h3>`;
+
+        workouthtml += htmlSegment;
+        workouts.innerHTML = workouthtml;
+    });
+
 }
 
 startUp();
