@@ -24,10 +24,38 @@ app.get("/api/calendar", async (req,res) => {
     }
 })
 
+app.get("/api/calendar/:id", async (req,res) => {
+    let id = req.params.id;
+    console.log(res.body)
+    // if(obj === undefined) {
+    //     res.statusCode = 404
+    //     res.header('Content-Type', 'text/plain');
+    //     res.send('Could Not Find')
+    // } else {
+        try {
+            const data = await pool.query('SELECT * FROM calendar;')
+            res.send(data.rows[id]);
+        } catch (err) {
+            console.error(err.message)
+        }
+    // }
+
+})
+
 app.get("/api/workout", async (req,res) => {
     try {
         const data = await pool.query('SELECT * FROM workout;')
         res.send(data.rows);
+    } catch (err) {
+        console.error(err.message)
+    }
+})
+
+app.get("/api/workout/:id", async (req,res) => {
+    let id = req.params.id;
+    try {
+        const data = await pool.query('SELECT * FROM workout;')
+        res.send(data.rows[id]);
     } catch (err) {
         console.error(err.message)
     }
@@ -42,6 +70,16 @@ app.get("/api/exercise", async (req,res) => {
     }
 })
 
+app.get("/api/exercise/:id", async (req,res) => {
+    let id = req.params.id;
+    try {
+        const data = await pool.query('SELECT * FROM exercise;')
+        res.send(data.rows[id]);
+    } catch (err) {
+        console.error(err.message)
+    }
+})
+
 app.get("/api/workout_plans", async (req,res) => {
     try {
         const data = await pool.query('SELECT * FROM workout_plans;')
@@ -51,10 +89,30 @@ app.get("/api/workout_plans", async (req,res) => {
     }
 })
 
+app.get("/api/workout_plans/:id", async (req,res) => {
+    let id = req.params.id;
+    try {
+        const data = await pool.query('SELECT * FROM workout_plans;')
+        res.send(data.rows[id]);
+    } catch (err) {
+        console.error(err.message)
+    }
+})
+
 app.get("/api/exercise_list", async (req,res) => {
     try {
         const data = await pool.query('SELECT * FROM exercise_list;')
         res.send(data.rows);
+    } catch (err) {
+        console.error(err.message)
+    }
+})
+
+app.get("/api/exercise_list/:id", async (req,res) => {
+    let id = req.params.id;
+    try {
+        const data = await pool.query('SELECT * FROM exercise_list;')
+        res.send(data.rows[id]);
     } catch (err) {
         console.error(err.message)
     }
