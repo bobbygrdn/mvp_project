@@ -18,6 +18,7 @@ const buttonDev = () => {
         user.style.display = "none";
         currentplan.style.display = "none";
         workouts.style.display= "none";
+        history.style.display="block";
         const calendarurl = 'https://desolate-reef-75349.herokuapp.com/api/calendar/';
     let calendarhtml = '';
     fetch(calendarurl)
@@ -25,7 +26,7 @@ const buttonDev = () => {
     .then(data => {
         data.forEach(data => {
             let htmlSegment = `
-            <div class='calendar'>
+            <div class='current'>
             <h2>${data.calendar_id}</h2>
             <h3>${data.month}</h3>
             <h3>${data.day}</h3>
@@ -35,6 +36,7 @@ const buttonDev = () => {
             calendarhtml += htmlSegment;
         })
         history.innerHTML = calendarhtml;
+
     });
     })
 }
