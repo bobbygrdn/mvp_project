@@ -37,9 +37,11 @@ const buttonDev = () => {
         console.log('List!')
     ])
     profile.addEventListener('click', () => {
-        currentplan.style.display = 'none';
-        workouts.style.display = 'none';
-        user.style.display= 'none';
+        currentplan.style.display = 'block';
+        workouts.style.display = 'block';
+        user.style.display = 'block';
+        history.style.display = 'none';
+        exercises.style.display = 'none';
     })
     addExercise.addEventListener('click', () => {
         addExercise.style.display = 'none';
