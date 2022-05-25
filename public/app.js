@@ -30,12 +30,23 @@ const startData = () => {
 }
 
 const buttonDev = () => {
+    
     calendar.addEventListener('click', () => {
-        console.log('Calendar!')
+        currentplan.style.display = 'none';
+        workouts.style.display = 'none';
+        user.style.display = 'none';
+        exercises.style.display = 'none';
+        history.style.display = 'block';
     })
-    list.addEventListener('click', () => [
-        console.log('List!')
-    ])
+
+    list.addEventListener('click', () => {
+        currentplan.style.display = 'none';
+        workouts.style.display = 'none';
+        user.style.display = 'none';
+        history.style.display = 'none';
+        exercises.style.display = 'block';
+    })
+
     profile.addEventListener('click', () => {
         currentplan.style.display = 'block';
         workouts.style.display = 'block';
@@ -43,6 +54,7 @@ const buttonDev = () => {
         history.style.display = 'none';
         exercises.style.display = 'none';
     })
+
     addExercise.addEventListener('click', () => {
         addExercise.style.display = 'none';
         dropExercise.style.display = 'none';
