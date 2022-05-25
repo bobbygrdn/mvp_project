@@ -38,7 +38,7 @@ const buttonDev = () => {
     })
     addExercise.addEventListener('click', () => {
         console.log('Working!')
-        workoutInput.style.diplay = 'block';
+        workoutInput.style.diplay = '';
     })
 }
 
