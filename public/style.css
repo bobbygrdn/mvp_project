@@ -85,7 +85,7 @@ h2 {
     border: 1px solid black;
     padding: 1em;
     border-radius: 5px;
-    background-color: whitesmoke;
+    background: #FFF url("https://imgur.com/M66DS9y") no-repeat center top;
 }
 
 .workouts {
@@ -121,4 +121,5 @@ h2 {
 
 .currentplan img {
     position: relative;
+
 }
