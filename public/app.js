@@ -3,6 +3,7 @@ const list = document.querySelector('.list');
 const plans = document.querySelector('.plans');
 const profile = document.querySelector('.profile');
 const history = document.querySelector('.history');
+const exercises = document.querySelector('.exercises');
 
 const user = document.querySelector('.user');
 const currentplan = document.querySelector('.currentplan');
@@ -63,7 +64,7 @@ const buttonDev = () => {
     
                 listhtml += htmlSegment;
             })
-            list.innerHTML += listhtml;
+            exercises.innerHTML += listhtml;
         });
     })
     
