@@ -51,7 +51,8 @@ const buttonDev = () => {
         list.style.display="block";
 
         const listurl = 'https://desolate-reef-75349.herokuapp.com/api/exercise_list/';
-        let listhtml = '';
+        let listhtml = '<button type="submit">Add Exercise</button>';
+        
         fetch(listurl)
         .then(response => response.json())
         .then(data => {
