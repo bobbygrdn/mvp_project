@@ -38,13 +38,13 @@ const buttonDev = () => {
 }
 
 //Start Data Helper Functions
-const plan = () => {
-    const data = fetch('https://desolate-reef-75349.herokuapp.com/api/workout')
+const plan = async () => {
+    const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/workout')
     console.log(data)
 }
 
-const workout = () => {
-    const data = fetch('https://desolate-reef-75349.herokuapp.com/api/workout_plans')
+const workout = async () => {
+    const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/workout_plans')
     console.log(data)
 }
 
