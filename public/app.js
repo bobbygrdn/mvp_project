@@ -7,7 +7,7 @@ const addExercise = document.querySelector('#addExercise');
 //Forms
 const historyInput = document.querySelector('#history_input');
 const exerciseInput = document.querySelector('#exercise_input');
-const workoutInput = document.querySelector('#workout_input');
+const workoutInput = document.getElementById('#workout_input');
 
 //Containers
 const history = document.querySelector('.history');
