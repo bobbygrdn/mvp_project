@@ -30,9 +30,9 @@ const buttonDev = () => {
                 let htmlSegment = `
                 <div class='current'>
                 <h2>${data.calendar_id}</h2>
-                <h3>${data.month}</h3>
-                <h3>${data.day}</h3>
-                <h3>${data.year}</h3>
+                <h3 class="date">${data.month}</h3>
+                <h3 class="date">${data.day}</h3>
+                <h3 class="date">${data.year}</h3>
                 `;
 
                 calendarhtml += htmlSegment;
