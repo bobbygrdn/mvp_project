@@ -119,7 +119,8 @@ const getData = () => {
 
     const input = document.querySelector('#workout');
     input.addEventListener('click', () => {
-        
+        let input = document.querySelector('#text1');
+        input.style.display = "block";
     })
 
 }
