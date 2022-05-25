@@ -29,11 +29,20 @@
 }
 
 .button {
-
+    color: black;
+    width: 10%;
+    height: 5%;
+    background: none;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 10px;
+    transition: all 0.5s ease;
 }
 
 .button:hover {
-    
+    color:black;
+    background: white;
 }
 
 .calendar:hover,
