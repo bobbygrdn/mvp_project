@@ -4,25 +4,36 @@ const list = document.querySelector('.list');
 const profile = document.querySelector('.profile');
 
 //Forms
-const history = document.querySelector('#history_input');
-const exercise = document.querySelector('#exercise_input');
-const workout = document.querySelector('#workout_input');
+const historyInput = document.querySelector('#history_input');
+const exerciseInput = document.querySelector('#exercise_input');
+const workoutInput = document.querySelector('#workout_input');
+
+//Containers
+const history = document.querySelector('.history');
+const exercises = document.querySelector('.exercises');
+const currentplan = document.querySelector('.currentplan');
+const workouts = document.querySelector('.workouts');
 
 const startUp = () => {
+    startData();
+    buttonDev();
+}
+
+const startData = () => {
 
 }
 
 //Form Helper Functions
 const historyForm = () => {
-    history.style.display = 'none'
+    historyInput.style.display = 'none'
 }
 
 const exerciseForm = () => {
-    exercise.style.display = 'none'
+    exerciseInput.style.display = 'none'
 }
 
 const workoutForm = () => [
-    workout.style.display = 'none'
+    workoutInput.style.display = 'none'
 ]
 
 startUp();
