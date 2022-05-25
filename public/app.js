@@ -62,7 +62,7 @@ const getData = () => {
             <h3>${data.length_of_plan}</h3>`;
 
         planhtml+=htmlSegment;
-        currentplan.innerHTML = planhtml;
+        currentplan.innerHTML += planhtml;
     });
 
     const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workout/';
@@ -81,7 +81,7 @@ const getData = () => {
 
             workouthtml += htmlSegment;
         })
-        workouts.innerHTML = workouthtml;
+        workouts.innerHTML += workouthtml;
     });
 
 }
