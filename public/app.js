@@ -84,6 +84,12 @@ const buttonDev = () => {
         history.style.display="none";
         exercises.style.display="none";
     })
+
+    new_workout.addEventListener('click', () => {
+        console.log(working)
+        new_workout.style.display = 'none';
+        exercise_form.style.display = 'block';
+    })
 };
 
 const getData = () => {
@@ -118,12 +124,6 @@ const getData = () => {
         })
         workouts.innerHTML += workouthtml;
     });
-
-    new_workout.addEventListener('click', () => {
-        console.log(working)
-        new_workout.style.display = 'none';
-        exercise_form.style.display = 'block';
-    })
 
 }
 
