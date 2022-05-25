@@ -12,8 +12,8 @@ const workouts = document.querySelector('.workouts');
 const exercise_form = document.querySelector('#exercise_input');
 
 const startUp = () => {
-    buttonDev();
     getData();
+    buttonDev();
 }
 
 const buttonDev = () => {
@@ -109,7 +109,7 @@ const getData = () => {
     });
 
     const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workout/';
-    let workouthtml = '';
+    let workouthtml = '<button id="workout" class="button" type="submit">Add Exercise</button>';
     
     fetch(workouturl)
     .then(response => response.json())
