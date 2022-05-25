@@ -138,8 +138,6 @@ h2 {
 
 .current {
     display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     width: 70%;
     border: 1px solid black;
     padding: 1em;
