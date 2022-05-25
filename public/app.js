@@ -24,7 +24,7 @@ const buttonDev = () => {
 
 
         const calendarurl = 'https://desolate-reef-75349.herokuapp.com/api/calendar/';
-        let calendarhtml = `<button type="submit">Add Date</button>`;
+        let calendarhtml = `<button class="button" type="submit">Add Date</button>`;
 
         fetch(calendarurl)
         .then(response => response.json())
@@ -52,7 +52,7 @@ const buttonDev = () => {
         exercises.style.display="block";
 
         const listurl = 'https://desolate-reef-75349.herokuapp.com/api/exercise';
-        let listhtml = '<button type="submit">Add Exercise</button>';
+        let listhtml = '<button class="button" type="submit">Add Exercise</button>';
         
         fetch(listurl)
         .then(response => response.json())
@@ -102,7 +102,7 @@ const getData = () => {
     });
 
     const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workout/';
-    let workouthtml = '';
+    let workouthtml = '<button class="button" type="submit">Add New Exercise</button>';
     fetch(workouturl)
     .then(response => response.json())
     .then(data => {

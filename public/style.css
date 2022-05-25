@@ -16,7 +16,8 @@
 
 .calendar,
 .list,
-.profile {
+.profile,
+.button {
     color: white;
     width: 20%;
     height: 10%;
