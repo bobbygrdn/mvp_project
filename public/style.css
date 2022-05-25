@@ -30,19 +30,19 @@
 
 .button {
     color: black;
-    width: 10%;
-    height: 5%;
+    width: 20%;
+    height: 10%;
     background: none;
     border: 2px solid black;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 20px;
     transition: all 0.5s ease;
 }
 
 .button:hover {
-    color:black;
-    background: white;
+    color:white;
+    background: black;
 }
 
 .calendar:hover,
