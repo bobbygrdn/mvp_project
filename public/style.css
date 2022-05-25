@@ -151,7 +151,6 @@ h2 {
 }
 
 .current {
-    display: flexbox;
     width: 70%;
     border: 1px solid black;
     padding: 1em;
