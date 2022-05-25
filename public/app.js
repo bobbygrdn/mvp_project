@@ -38,7 +38,7 @@ const buttonDev = () => {
     })
     addExercise.addEventListener('click', () => {
         console.log('Working!')
-        workoutInput.style.diplay = "block";
+        workoutInput.style.display = 'block';
     })
 }
 
@@ -82,12 +82,33 @@ const exerciseForm = () => {
 }
 
 const workoutForm = (form) => {
-    // workoutInput.style.display = 'none';
+    workoutInput.style.display = 'none';
     let exerciseName = form.exercise_name.value; 
     let sets = form.sets.value;
     let reps = form.reps.value;
     let rest = form.rest.value;
-    console.log(exerciseName,sets,reps,rest)
+    
+    const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workout'
+
+    let data = {
+        exercise_name: `${exerciseName}`,
+        sets: `${sets}`,
+        reps_time: `${reps}`,
+        rest_cycle: `${rest}`
+    }
+
+    let fetchData = {
+        method: 'Post',
+        body: JSON.stringify(data),
+        headers: new Headers({
+            'Content-Type': 'application/json; charset=UTF-8'
+        })
+    }
+
+    fetch(workouturl, fetchData)
+        .then(() => {
+            alert('Exercise Added!');
+        })
 }
 
 startUp();
