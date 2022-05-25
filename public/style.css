@@ -105,7 +105,7 @@ h2 {
     background-position: bottom right;
     background-repeat: no-repeat;
     background-color: whitesmoke;
-    background-size: 80%;
+    background-size: cover;
 }
 
 .workouts {
