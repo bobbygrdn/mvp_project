@@ -41,13 +41,13 @@ const buttonDev = () => {
 const plan = async () => {
     const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/workout')
     const result = await data.json()
-    console.log(data)
+    console.log(result)
 }
 
 const workout = async () => {
     const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/workout_plans')
     const result = await data.json()
-    console.log(data)
+    console.log(result)
 }
 
 //Form Helper Functions
