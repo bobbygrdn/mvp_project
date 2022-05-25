@@ -81,8 +81,13 @@ const exerciseForm = () => {
     exerciseInput.style.display = 'none'
 }
 
-const workoutForm = () => [
-    workoutInput.style.display = 'none'
-]
+const workoutForm = () => {
+    // workoutInput.style.display = 'none';
+    let exerciseName = workoutForm.exercise_name.value; 
+    let sets = workoutForm.sets.value;
+    let reps = workoutForm.reps.value;
+    let rest = workoutForm.rest.value;
+    console.log(exerciseName,sets,reps,rest)
+}
 
 startUp();
