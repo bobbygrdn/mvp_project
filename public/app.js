@@ -50,13 +50,19 @@ const workout = async () => {
     createList(result);
 }
 
-const createList = (result) => {
+const createList = (arr) => {
+    arr.forEach((elem) => [
+        createListItem(elem)
+    ]);
+};
+
+const createListItem = (elem) => {
     const div = document.createElement('div');
-    div.id = result.id;
+    div.id = elem.id;
     div.className = 'exercises'
-    div.textContent = result.exercise_name; 
-    currentplan.appendChild(div)
-}
+    div.textContent = elem.exercise_name; 
+    workouts.appendChild(div)
+};
 
 //Form Helper Functions
 const historyForm = () => {
