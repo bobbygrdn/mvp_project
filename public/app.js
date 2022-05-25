@@ -103,6 +103,7 @@ const getData = () => {
 
     const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workout/';
     let workouthtml = '<button class="button" type="submit">Add New Exercise</button>';
+
     fetch(workouturl)
     .then(response => response.json())
     .then(data => {
@@ -110,9 +111,7 @@ const getData = () => {
             let htmlSegment = `
             <div class='current'>
             <h2>${data.workout_id}</h2>
-            <h3>${data.exercise_name}</h3>
-            <h3>Sets:${data.sets} X Reps:${data.reps_time}</h3>
-            <h3>Rest:${data.rest_cycle}</h3>
+            <h3>${data.workout_id} ${data.exercise_name} Sets:${data.sets} X Reps:${data.reps_time} Rest:${data.rest_cycle}</h3>
             `;
 
             workouthtml += htmlSegment;
