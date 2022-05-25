@@ -56,7 +56,7 @@ const createList = (arr) => {
     })
 }
 
-const createExercise = () => {
+const createExercise = (elem) => {
     const div = document.createElement('div');
     div.id = elem.id;
     div.className = 'Exercise'
