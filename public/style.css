@@ -104,6 +104,11 @@ h2 {
     background-image: url("https://i.imgur.com/M66DS9y.jpg");
 }
 
+.currentplan img {
+    object-position: center;
+    object-fit: fill;
+}
+
 .workouts {
     margin: 3em auto;
     align-self: center;
