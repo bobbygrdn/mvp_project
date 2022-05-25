@@ -61,12 +61,12 @@ const buttonDev = () => {
                 let htmlSegment = `
                 <div class='current'>
                 <h2>${data.exercise_id}</h2>
-                <h3>Name:${data.exercise_name}</h3>
-                <h3>Type of Exercise:${data.type_of}</h3>
-                <h3>Muscle Group(s):${data.muscle_group}</h3>
-                <h3>Reps/Time/Interval${data.reps_time_interval}</h3>
-                <h3>Summary:${data.instructions}</h3>
-                <h3>Equipmen you will need:${data.equipment_needed}</h3>
+                <h3>Name: ${data.exercise_name}</h3>
+                <h3>Type of Exercise: ${data.type_of}</h3>
+                <h3>Muscle Group(s): ${data.muscle_group}</h3>
+                <h3>Reps/Time/Interval: ${data.reps_time_interval}</h3>
+                <h3>Summary: ${data.instructions}</h3>
+                <h3>Equipmen you will need: ${data.equipment_needed}</h3>
                 `;
     
                 listhtml += htmlSegment;
