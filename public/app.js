@@ -130,7 +130,7 @@ const workoutForm = (form) => {
 //User Profile Drop Exercise
 const dropForm = (form) => {
     let workout_id = form.exercise_name.value;
-    const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workout'
+    const dropurl = 'https://desolate-reef-75349.herokuapp.com/api/workout'
 
     let data = {
         workout_id: `${workout_id}`
@@ -144,7 +144,7 @@ const dropForm = (form) => {
         })
     }
 
-    fetch(workouturl, fetchData)
+    fetch(dropurl, fetchData)
     .then(() => {
         alert('Exercise Dropped!');
     })
