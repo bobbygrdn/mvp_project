@@ -22,7 +22,7 @@ const buttonDev = () => {
 
 
         const calendarurl = 'https://desolate-reef-75349.herokuapp.com/api/calendar/';
-        let calendarhtml = '';
+        let calendarhtml = `<button type="submit">Add Date</button>`;
 
         fetch(calendarurl)
         .then(response => response.json())
@@ -38,7 +38,7 @@ const buttonDev = () => {
 
                 calendarhtml += htmlSegment;
             });
-            history.innerHTML += calendarhtml;
+            history.innerHTML = calendarhtml;
         });
     });
 
