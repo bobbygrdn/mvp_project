@@ -85,7 +85,12 @@ h2 {
     border: 1px solid black;
     padding: 1em;
     border-radius: 5px;
-    background: #FFF url("https://imgur.com/M66DS9y") no-repeat center top;
+}
+
+.currentplan img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .workouts {
