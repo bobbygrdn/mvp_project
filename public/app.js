@@ -37,7 +37,7 @@ const buttonDev = () => {
         console.log('Profile!')
     })
     addExercise.addEventListener('click', () => {
-        console.log('Working!')
+        addExercise.style.display = 'none'
         workoutInput.style.display = 'block';
     })
 }
@@ -109,6 +109,7 @@ const workoutForm = (form) => {
         .then(() => {
             alert('Exercise Added!');
         })
+        addExercise.style.display = 'block'
 }
 
 startUp();
