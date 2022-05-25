@@ -179,7 +179,7 @@ const log = async () => {
 
 const createLog = (arr) => {
     arr.forEach((elem) => [
-        createListItem(elem)
+        createLogItem(elem)
     ]);
 };
 
