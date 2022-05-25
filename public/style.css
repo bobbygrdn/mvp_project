@@ -32,7 +32,8 @@
 .calendar:hover,
 .list:hover,
 .plans:hover,
-.profile:hover {
+.profile:hover,
+.button:hover {
     color:black;
     background: white;
 }
