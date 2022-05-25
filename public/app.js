@@ -47,7 +47,21 @@ const plan = async () => {
 const workout = async () => {
     const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/workout_plans')
     const result = await data.json()
-    console.log(result)
+    createList(result);
+}
+
+const createList = (arr) => {
+    arr.forEach((elem) => {
+        createExercise(elem);
+    })
+}
+
+const createExercise = () => {
+    const div = document.createElement('div');
+    div.id = elem.id;
+    div.className = 'Exercise'
+    div.textContent = elem.exercise_name + elem.sets + elem.reps_time + elem.rest_cycle; 
+    workouts.appendChild(div)
 }
 
 //Form Helper Functions
