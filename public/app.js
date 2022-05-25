@@ -50,12 +50,12 @@ const workout = async () => {
     createList(result);
 }
 
-const createList = (elem) => {
+const createList = (result) => {
     const div = document.createElement('div');
-    div.id = elem.id;
+    div.id = result.id;
     div.className = 'exercises'
-    div.textContent = elem.exercise_name; 
-    workouts.appendChild(div)
+    div.textContent = result.exercise_name; 
+    currentplan.appendChild(div)
 }
 
 //Form Helper Functions
