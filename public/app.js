@@ -183,7 +183,7 @@ const createLog = (arr) => {
     ]);
 };
 
-const CreateLogItem = (elem) => {
+const createLogItem = (elem) => {
     const div = document.createElement('div');
     div.id = elem.calendar_id;
     div.className = 'dates'
