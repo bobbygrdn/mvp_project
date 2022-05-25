@@ -193,6 +193,5 @@ const createLogItem = (elem) => {
     `; 
     history.appendChild(div)
 };
-    
-
+  
 startUp();
