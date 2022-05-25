@@ -119,9 +119,22 @@ const getData = () => {
 
     const input = document.querySelector('#workout');
     input.addEventListener('click', () => {
-
+        input.style.display = 'none';
+        let form = document.querySelector('#exercise_input');
+        form.style.display = 'block';
     })
 
+}
+
+const runform = (form) => {
+    var name = form.exercise_name.value;
+    var sets = form.sets.value;
+    var reps = form.reps.value;
+    var rest = form.rest.value;
+    console.log(name,sets,reps,rest)
+    const url = 'https://desolate-reef-75349.herokkuapp.com/api/workout'
+
+    
 }
 
 startUp();
