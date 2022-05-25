@@ -108,6 +108,17 @@ h2 {
     background-size: contain;
 }
 
+.exercises {
+    margin: 3em auto;
+    align-self: center;
+    width: 80%;
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    display: none;
+}
+
 .workouts {
     margin: 3em auto;
     align-self: center;
@@ -138,17 +149,6 @@ h2 {
     background-color: whitesmoke;
     display: none;
 }
-
-/* .exercises {
-    margin: 3em auto;
-    align-self: center;
-    width: 80%;
-    border: 1px solid black;
-    padding: 1em;
-    border-radius: 5px;
-    background-color: whitesmoke;
-    display: none;
-} */
 
 #history_input {
     display: none;
