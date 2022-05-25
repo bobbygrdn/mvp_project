@@ -102,10 +102,10 @@ h2 {
     padding: 1em;
     border-radius: 5px;
     background-image: url("https://i.imgur.com/M66DS9y.jpg");
-}
-
-.currentplan img {
-    width: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: whitesmoke;
 }
 
 .workouts {
