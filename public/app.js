@@ -101,7 +101,7 @@ const getData = () => {
     });
 
     const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workout/';
-    let workouthtml = '<button id="workout" class="button" type="submit">Add Exercise</button>';
+    let workouthtml = '';
     
     fetch(workouturl)
     .then(response => response.json())
