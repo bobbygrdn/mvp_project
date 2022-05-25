@@ -16,8 +16,7 @@
 
 .calendar,
 .list,
-.profile,
-.button {
+.profile {
     color: white;
     width: 20%;
     height: 10%;
@@ -29,11 +28,18 @@
     transition: all 0.5s ease;
 }
 
+.button {
+
+}
+
+.button:hover {
+    
+}
+
 .calendar:hover,
 .list:hover,
 .plans:hover,
-.profile:hover,
-.button:hover {
+.profile:hover {
     color:black;
     background: white;
 }
