@@ -120,8 +120,6 @@ h2 {
 }
 
 .currentplan img {
-    object-fit: cover;
-    object-position: right top;
-    width: auto;
-    height:max-content;
+    max-width: 100%;
+    max-height: 100%;
 }
