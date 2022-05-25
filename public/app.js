@@ -3,11 +3,13 @@ const calendar = document.querySelector('.calendar');
 const list = document.querySelector('.list');
 const profile = document.querySelector('.profile');
 const addExercise = document.querySelector('#addExercise');
+const dropExercise = document.querySelector('#dropExercise')
 
 //Forms
 const historyInput = document.querySelector('#history_input');
 const exerciseInput = document.querySelector('#exercise_input');
 const workoutInput = document.querySelector('#workout_input');
+const dropInput = document.querySelector('#drop_input');
 
 //Containers
 const history = document.querySelector('.history');
@@ -39,6 +41,11 @@ const buttonDev = () => {
     addExercise.addEventListener('click', () => {
         addExercise.style.display = 'none'
         workoutInput.style.display = 'block';
+    })
+
+    dropExercise.addEventListener('click', () => {
+        addExercise.style.display = 'none';
+        
     })
 }
 
