@@ -45,7 +45,7 @@ const buttonDev = () => {
 
     dropExercise.addEventListener('click', () => {
         addExercise.style.display = 'none';
-        dropInput.style.dispaly = 'block';
+        dropInput.style.display = 'block';
     })
 }
 
@@ -53,7 +53,7 @@ const buttonDev = () => {
 const plan = async () => {
     const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/workout_plans')
     const result = await data.json()
-    
+
     let html = `
     <h2>${result[0].plan_name}</h2>
     <h3>${result[0].type_of_plan}</h3>
