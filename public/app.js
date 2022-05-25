@@ -23,6 +23,18 @@ const startData = () => {
 
 }
 
+const buttonDev = () => {
+    calendar.addEventListener('click', () => {
+        console.log('Calendar!')
+    })
+    list.addEventListener('click', () => [
+        console.log('List!')
+    ])
+    profile.addEventListener('click', () => {
+        console.log('Profile!')
+    })
+}
+
 //Form Helper Functions
 const historyForm = () => {
     historyInput.style.display = 'none'
