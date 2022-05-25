@@ -19,6 +19,7 @@ const buttonDev = () => {
         user.style.display = "none";
         currentplan.style.display = "none";
         workouts.style.display= "none";
+        exercises.style.display="none";
         history.style.display="block";
 
 
@@ -65,7 +66,7 @@ const buttonDev = () => {
     
                 listhtml += htmlSegment;
             })
-            exercises.innerHTML += listhtml;
+            exercises.innerHTML = listhtml;
         });
     })
     
@@ -75,6 +76,7 @@ const buttonDev = () => {
         currentplan.style.display = "block";
         workouts.style.display= "block";
         history.style.display="none";
+        exercises.style.display="none";
     })
 };
 
