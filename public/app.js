@@ -120,9 +120,9 @@ const getData = () => {
     });
 
     new_workout.addEventListener('click', () => {
-        input.style.display = 'none';
-        let form = document.querySelector('#exercise_input');
-        form.style.display = 'block';
+        new_workout.style.display = 'none';
+        
+        exercise_form.style.display = 'block';
     })
 
 }
