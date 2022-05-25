@@ -47,17 +47,10 @@ const plan = async () => {
 const workout = async () => {
     const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/workout_plans')
     const result = await data.json()
-    console.log(result)
     createList(result);
 }
 
-const createList = (result) => {
-    result.forEach((elem) => {
-        createExercise(elem);
-    })
-}
-
-const createExercise = (elem) => {
+const createList = (elem) => {
     const div = document.createElement('div');
     div.id = elem.id;
     div.className = 'exercises'
