@@ -4,10 +4,12 @@ const plans = document.querySelector('.plans');
 const profile = document.querySelector('.profile');
 const history = document.querySelector('.history');
 const exercises = document.querySelector('.exercises');
+const workout = document.querySelector('#workout');
 
 const user = document.querySelector('.user');
 const currentplan = document.querySelector('.currentplan');
 const workouts = document.querySelector('.workouts');
+const exercise_form = document.querySelector('#exercise_input');
 
 const startUp = () => {
     buttonDev();
@@ -117,8 +119,7 @@ const getData = () => {
         workouts.innerHTML += workouthtml;
     });
 
-    const input = document.querySelector('#workout');
-    input.addEventListener('click', () => {
+    workout.addEventListener('click', () => {
         input.style.display = 'none';
         let form = document.querySelector('#exercise_input');
         form.style.display = 'block';
@@ -127,15 +128,14 @@ const getData = () => {
 }
 
 const runform = (form) => {
-    const input = document.querySelector('#exercise_input');
-    input.style.display = 'none';
+    exercise_form.style.display = 'none';
 
     var name = form.exercise_name.value;
     var sets = form.sets.value;
     var reps = form.reps.value;
     var rest = form.rest.value;
     console.log(name,sets,reps,rest)
-    
+
     const url = 'https://desolate-reef-75349.herokkuapp.com/api/workout'
 
     
