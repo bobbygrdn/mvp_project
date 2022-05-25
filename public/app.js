@@ -4,7 +4,7 @@ const plans = document.querySelector('.plans');
 const profile = document.querySelector('.profile');
 const history = document.querySelector('.history');
 const exercises = document.querySelector('.exercises');
-const workout = document.querySelector('#workout');
+const new_workout = document.querySelector('#workout');
 
 const user = document.querySelector('.user');
 const currentplan = document.querySelector('.currentplan');
@@ -119,7 +119,7 @@ const getData = () => {
         workouts.innerHTML += workouthtml;
     });
 
-    workout.addEventListener('click', () => {
+    new_workout.addEventListener('click', () => {
         input.style.display = 'none';
         let form = document.querySelector('#exercise_input');
         form.style.display = 'block';
