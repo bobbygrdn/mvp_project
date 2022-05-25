@@ -57,8 +57,7 @@ h2 {
 }
 
 .date {
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-flex;
 }
 
 .height,
