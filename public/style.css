@@ -77,10 +77,6 @@ h2 {
     pointer-events: None;
 }
 
-.current {
-    
-}
-
 .currentplan {
     margin: 3em auto;
     align-self: center;
@@ -138,4 +134,14 @@ h2 {
     border-radius: 5px;
     background-color: whitesmoke;
     display: none;
+}
+
+.current {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: whitesmoke;
 }
