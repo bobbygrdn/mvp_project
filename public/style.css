@@ -117,5 +117,8 @@ h2 {
     border-radius: 5px;
     background-color: whitesmoke;
     display: none;
-    
+}
+
+.currentplan img {
+    position: relative;
 }
