@@ -116,17 +116,17 @@ const getData = () => {
         })
         workouts.innerHTML += workouthtml;
     });
-    
+
     const input = querySelector('#workout');
     input.addEventListener('click', () => {
         let name = prompt("Please enter an exercise name");
-        console.log(name)
+        console.log(name.value)
         let sets = prompt("Please enter the number of sets");
-        console.log(sets)
+        console.log(sets.value)
         let reps_time = prompt("Please enter the number of reps/time");
-        console.log(reps_time)
+        console.log(reps_time.value)
         let rest = prompt("Please enter the rest period");
-        console.log(rest)
+        console.log(rest.value)
     })
 
 }
