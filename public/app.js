@@ -48,10 +48,10 @@ const plan = async () => {
     const result = await data.json()
     console.log(result)
     let html = `
-    <h2>${result.plan_id}</h2>
-    <h3>${result.plan_name}</h3>
-    <h3>${result.type_of_plan}</h3>
-    <h3>${result.length_of_plan}</h3>
+    <h2>${result[0].plan_id}</h2>
+    <h3>${result[0].plan_name}</h3>
+    <h3>${result[0].type_of_plan}</h3>
+    <h3>${result[0].length_of_plan}</h3>
     `
     currentplan.innerHTML += html;
 }
