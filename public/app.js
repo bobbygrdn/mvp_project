@@ -94,6 +94,8 @@ const exerciseForm = () => {
     exerciseInput.style.display = 'none'
 }
 
+
+//User Profile Create Exercise
 const workoutForm = (form) => {
     workoutInput.style.display = 'none';
     let exerciseName = form.exercise_name.value; 
@@ -125,6 +127,7 @@ const workoutForm = (form) => {
         addExercise.style.display = 'block'
 }
 
+//User Profile Drop Exercise
 const dropForm = (form) => {
     let workout_id = form.exercise_name.value;
     const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workout'
