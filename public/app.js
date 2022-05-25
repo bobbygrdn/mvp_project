@@ -111,7 +111,7 @@ const getData = () => {
             let htmlSegment = `
             <div class='current'>
             <h2>${data.workout_id}</h2>
-            <h3>${data.exercise_name} Sets:${data.sets} X Reps:${data.reps_time} Rest:${data.rest_cycle}</h3>
+            <h3>${data.exercise_name} Sets: ${data.sets} X Reps: ${data.reps_time} Rest: ${data.rest_cycle}</h3>
             `;
 
             workouthtml += htmlSegment;
