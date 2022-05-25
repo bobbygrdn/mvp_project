@@ -139,7 +139,7 @@ h2 {
     display: none;
 }
 
-.exercises {
+/* .exercises {
     margin: 3em auto;
     align-self: center;
     width: 80%;
@@ -148,7 +148,7 @@ h2 {
     border-radius: 5px;
     background-color: whitesmoke;
     display: none;
-}
+} */
 
 #history_input {
     display: none;
