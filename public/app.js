@@ -48,7 +48,7 @@ const buttonDev = () => {
         currentplan.style.display = "none";
         workouts.style.display= "none";
         history.style.display="none";
-        list.style.display="block";
+        exercises.style.display="block";
 
         const listurl = 'https://desolate-reef-75349.herokuapp.com/api/exercise_list/';
         let listhtml = '<button type="submit">Add Exercise</button>';
