@@ -149,3 +149,7 @@ h2 {
     background-color: whitesmoke;
     display: none;
 }
+
+#exercise_input {
+    display: none;
+}
