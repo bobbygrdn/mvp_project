@@ -16,6 +16,7 @@ const history = document.querySelector('.history');
 const exercises = document.querySelector('.exercises');
 const currentplan = document.querySelector('.currentplan');
 const workouts = document.querySelector('.workouts');
+const user = document.querySelector('.user');
 
 const startUp = () => {
     startData();
@@ -36,10 +37,13 @@ const buttonDev = () => {
         console.log('List!')
     ])
     profile.addEventListener('click', () => {
-        console.log('Profile!')
+        currentplan.style.display = 'none';
+        workouts.style.display = 'none';
+        user.style.display= 'none';
     })
     addExercise.addEventListener('click', () => {
-        addExercise.style.display = 'none'
+        addExercise.style.display = 'none';
+        dropExercise.style.display = 'none';
         workoutInput.style.display = 'block';
     })
 
