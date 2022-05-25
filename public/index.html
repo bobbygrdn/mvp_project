@@ -38,7 +38,13 @@
 
     <div class="workouts">
         <button id="workout" class="button" type="submit">Add Exercise</button>
-        <input id="text1" placeholder="Enter text">
+        <form name="exercise_input" action="" method="POST">
+            <input type="text" name="exercise_name" value="">
+            <input type="text" name="sets" value="">
+            <input type="text" name="reps" value="">
+            <input type="text" name="rest" value="">
+            <input type="button" name="button" value="click" onClick="runform(this.form)">
+        </form>
     </div>
   
     <div class="footer">
