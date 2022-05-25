@@ -122,5 +122,6 @@ h2 {
 .currentplan img {
     object-fit: cover;
     object-position: right top;
-    width: 80%;
+    width: auto;
+    height:max-content;
 }
