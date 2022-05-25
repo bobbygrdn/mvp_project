@@ -51,7 +51,7 @@ const buttonDev = () => {
         history.style.display="none";
         exercises.style.display="block";
 
-        const listurl = 'https://desolate-reef-75349.herokuapp.com/api/exercise_list/';
+        const listurl = 'https://desolate-reef-75349.herokuapp.com/api/exercise';
         let listhtml = '<button type="submit">Add Exercise</button>';
         
         fetch(listurl)
@@ -60,8 +60,13 @@ const buttonDev = () => {
             data.forEach(data => {
                 let htmlSegment = `
                 <div class='current'>
-                <h2>${data.list_id}</h2>
+                <h2>${data.exercise_id}</h2>
                 <h3>${data.exercise_name}</h3>
+                <h3>${data.type_of}</h3>
+                <h3>${data.muscle_group}</h3>
+                <h3>${data.reps_time_interval}</h3>
+                <h3>${data.instructions}</h3>
+                <h3>${data.equipment_needed}</h3>
                 `;
     
                 listhtml += htmlSegment;
