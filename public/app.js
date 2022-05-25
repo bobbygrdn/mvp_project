@@ -102,6 +102,17 @@ const getData = () => {
 
     const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workout/';
     let workouthtml = '<button id="workout" class="button" type="submit">Add Exercise</button>';
+    const input = querySelector('#workout');
+    input.addEventListener('click', () => {
+        let name = prompt("Please enter an exercise name");
+        console.log(name)
+        let sets = prompt("Please enter the number of sets");
+        console.log(sets)
+        let reps_time = prompt("Please enter the number of reps/time");
+        console.log(reps_time)
+        let rest = prompt("Please enter the rest period");
+        console.log(rest)
+    })
 
     fetch(workouturl)
     .then(response => response.json())
