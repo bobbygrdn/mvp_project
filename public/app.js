@@ -43,7 +43,7 @@ const buttonDev = () => {
         });
     });
 
-    list.addEventListener('Click', () => {
+    list.addEventListener('click', () => {
         user.style.display = "none";
         currentplan.style.display = "none";
         workouts.style.display= "none";
