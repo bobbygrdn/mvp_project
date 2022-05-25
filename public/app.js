@@ -20,6 +20,8 @@ const startUp = () => {
 }
 
 const startData = () => {
+    plan();
+    workout();
 
 }
 
@@ -33,6 +35,17 @@ const buttonDev = () => {
     profile.addEventListener('click', () => {
         console.log('Profile!')
     })
+}
+
+//Start Data Helper Functions
+const plan = () => {
+    const data = fetch('https://desolate-reef-75349.herokuapp.com/api/workout')
+    console.log(data)
+}
+
+const workout = () => {
+    const data = fetch('https://desolate-reef-75349.herokuapp.com/api/workout_plans')
+    console.log(data)
 }
 
 //Form Helper Functions
