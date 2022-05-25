@@ -43,6 +43,11 @@ const buttonDev = () => {
     });
 
     list.addEventListener('Click', () => {
+        user.style.display = "none";
+        currentplan.style.display = "none";
+        workouts.style.display= "none";
+        history.style.display="none";
+
         const listurl = 'https://desolate-reef-75349.herokuapp.com/api/exercise_list/';
         let listhtml = '';
         fetch(listurl)
