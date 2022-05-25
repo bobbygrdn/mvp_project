@@ -59,8 +59,8 @@ const createList = (arr) => {
 const createExercise = (elem) => {
     const div = document.createElement('div');
     div.id = elem.id;
-    div.className = 'Exercise'
-    div.textContent = elem.exercise_name + elem.sets + elem.reps_time + elem.rest_cycle; 
+    div.className = 'exercise'
+    div.textContent = elem.exercise_name; 
     workouts.appendChild(div)
 }
 
