@@ -94,8 +94,8 @@ const getData = () => {
         let htmlSegment = `
             <div class='today'>
             <h2>${data.plan_name}</h2>
-            <h3 color="blue">${data.type_of_plan}</h3>
-            <h3 color="blue">${data.length_of_plan}</h3>`;
+            <h3>${data.type_of_plan}</h3>
+            <h3>${data.length_of_plan}</h3>`;
 
         planhtml+=htmlSegment;
         currentplan.innerHTML += planhtml;
