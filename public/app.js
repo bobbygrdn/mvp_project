@@ -191,7 +191,7 @@ const createLogItem = (elem) => {
     <h2>${elem.calendar_id}</h2>
     <h3>${elem.month} ${elem.month} ${elem.year}
     `; 
-    workouts.appendChild(div)
+    calendar.appendChild(div)
 };
     
 
