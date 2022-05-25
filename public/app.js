@@ -65,8 +65,7 @@ const buttonDev = () => {
                 <h3>Type of Exercise: ${data.type_of}</h3>
                 <h3>Muscle Group(s): ${data.muscle_group}</h3>
                 <h3>Reps/Time/Interval: ${data.reps_time_interval}</h3>
-                <h3>Summary: ${data.instructions}</h3>
-                <h3>Equipmen you will need: ${data.equipment_needed}</h3>
+                <h3>Equipment you will need: ${data.equipment_needed}</h3>
                 `;
     
                 listhtml += htmlSegment;
