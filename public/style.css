@@ -150,3 +150,14 @@ h2 {
     display: none;
 }
 
+#history_input {
+    display:none;
+}
+
+#exercise_input {
+    display:none;
+}
+
+#workout_input {
+    display:none;
+}
