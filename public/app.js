@@ -171,29 +171,28 @@ const dropForm = (form) => {
 }
 
 //Calendar Creation
-const log = () => {
-    const calendar = async () => {
-        const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/calendar')
-        const result = await data.json()
-        createList(result);
-    }
-    
-    const createList = (arr) => {
-        arr.forEach((elem) => [
-            createListItem(elem)
-        ]);
-    };
-    
-    const createListItem = (elem) => {
-        const div = document.createElement('div');
-        div.id = elem.calendar_id;
-        div.className = 'dates'
-        div.innerHTML = `
-        <h2>${elem.calendar_id}</h2>
-        <h3>${elem.month} ${elem.month} ${elem.year}
-        `; 
-        workouts.appendChild(div)
-    };
+const log = async () => {
+    const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/calendar')
+    const result = await data.json()
+    createLog(result);
 }
+
+const createLog = (arr) => {
+    arr.forEach((elem) => [
+        createListItem(elem)
+    ]);
+};
+
+const CreateLogItem = (elem) => {
+    const div = document.createElement('div');
+    div.id = elem.calendar_id;
+    div.className = 'dates'
+    div.innerHTML = `
+    <h2>${elem.calendar_id}</h2>
+    <h3>${elem.month} ${elem.month} ${elem.year}
+    `; 
+    workouts.appendChild(div)
+};
+    
 
 startUp();
