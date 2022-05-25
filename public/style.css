@@ -120,6 +120,6 @@ h2 {
 }
 
 .currentplan img {
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
+    object-position: right top;
 }
