@@ -65,17 +65,17 @@ h2 {
 .bodyfat,
 .bmi {
     display: inline-flex;
-    width: relative;
-    height: 2em;
+    flex-direction: column;
+    width: 8em;
+    height: 1.5em;
     background: none;
     border: 2px solid black;
     cursor: pointer;
     border-radius: 5px;
     font-size: 20px;
     align-items: center;
-    text-align: center;
     margin: 0 auto;
-    pointer-events: none;
+    pointer-events: None;
 }
 
 .currentplan {
