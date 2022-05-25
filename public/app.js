@@ -46,7 +46,7 @@ const buttonDev = () => {
 const plan = async () => {
     const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/workout_plans')
     const result = await data.json()
-
+    console.log(result)
     let html = `
     <h2>${result.plan_id}</h2>
     <h3>${result.plan_name}</h3>
