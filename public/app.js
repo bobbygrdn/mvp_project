@@ -108,7 +108,7 @@ const getData = () => {
     .then(data => {
         data.forEach(data => {
             let htmlSegment = `
-            <div class='first'>
+            <div class='current'>
             <h2>${data.workout_id}</h2>
             <h3>${data.exercise_name}</h3>
             <h3>Sets:${data.sets} X Reps:${data.reps_time}</h3>

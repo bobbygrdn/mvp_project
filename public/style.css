@@ -62,7 +62,8 @@ h2 {
 .height,
 .weight,
 .bodyfat,
-.bmi {
+.bmi, 
+.current {
     display: inline-flex;
     flex-direction: column;
     width: 8em;
