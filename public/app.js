@@ -61,7 +61,7 @@ const createListItem = (elem) => {
     div.id = elem.id;
     div.className = 'exercises'
     div.textContent = elem.exercise_name; 
-    workouts.appendChild(div)
+    workouts.append(div)
 };
 
 //Form Helper Functions
