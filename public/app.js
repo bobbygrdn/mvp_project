@@ -42,6 +42,26 @@ const buttonDev = () => {
         });
     });
 
+    list.addEventListener('Click', () => {
+        const listurl = 'https://desolate-reef-75349.herokuapp.com/api/exercise_list/';
+        let listhtml = '';
+        fetch(listurl)
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(data => {
+                let htmlSegment = `
+                <div class='list'>
+                <h2>${data.list_id}</h2>
+                <h3>${data.exercise_name}</h3>
+                `;
+    
+                listhtml += htmlSegment;
+            })
+            list.innerHTML += listhtml;
+        });
+    })
+    
+
     profile.addEventListener('click', () => {
         user.style.display = "block";
         currentplan.style.display = "block";
