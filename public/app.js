@@ -2,6 +2,7 @@
 const calendar = document.querySelector('.calendar');
 const list = document.querySelector('.list');
 const profile = document.querySelector('.profile');
+const addExercise = document.querySelector('#addExercise');
 
 //Forms
 const historyInput = document.querySelector('#history_input');
@@ -34,6 +35,9 @@ const buttonDev = () => {
     ])
     profile.addEventListener('click', () => {
         console.log('Profile!')
+    })
+    addExercise.addEventListener('click', () => {
+        console.log('Add Exercise!')
     })
 }
 
