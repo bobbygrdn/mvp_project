@@ -20,17 +20,17 @@ const user = document.querySelector('.user');
 
 const startUp = () => {
     startData();
+    log();
     buttonDev();
 }
 
 const startData = () => {
     plan();
     workout();
-
 }
 
 const buttonDev = () => {
-    
+
     calendar.addEventListener('click', () => {
         currentplan.style.display = 'none';
         workouts.style.display = 'none';
@@ -168,6 +168,32 @@ const dropForm = (form) => {
     })
 
     addExercise.style.display = 'block'
+}
+
+//Calendar Creation
+const log = () => {
+    const calendar = async () => {
+        const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/calendar')
+        const result = await data.json()
+        createList(result);
+    }
+    
+    const createList = (arr) => {
+        arr.forEach((elem) => [
+            createListItem(elem)
+        ]);
+    };
+    
+    const createListItem = (elem) => {
+        const div = document.createElement('div');
+        div.id = elem.calendar_id;
+        div.className = 'dates'
+        div.innerHTML = `
+        <h2>${elem.calendar_id}</h2>
+        <h3>${elem.month} ${elem.month} ${elem.year}
+        `; 
+        workouts.appendChild(div)
+    };
 }
 
 startUp();
