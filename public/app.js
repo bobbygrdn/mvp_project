@@ -20,6 +20,7 @@ const buttonDev = () => {
         workouts.style.display= "none";
         history.style.display="block";
 
+
         const calendarurl = 'https://desolate-reef-75349.herokuapp.com/api/calendar/';
         let calendarhtml = '';
 
@@ -37,7 +38,7 @@ const buttonDev = () => {
 
                 calendarhtml += htmlSegment;
             });
-            history.innerHTML += calendarhtml;
+            history.innerHTML = calendarhtml;
         });
     });
 
