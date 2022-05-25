@@ -4,7 +4,7 @@ const plans = document.querySelector('.plans');
 const profile = document.querySelector('.profile');
 const history = document.querySelector('.history');
 const exercises = document.querySelector('.exercises');
-const new_workout = document.querySelector('#workout');
+const new_workout = document.getElementById('#workout');
 
 const user = document.querySelector('.user');
 const currentplan = document.querySelector('.currentplan');
