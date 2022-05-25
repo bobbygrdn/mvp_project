@@ -137,7 +137,7 @@ h2 {
 }
 
 .current {
-    display: flex;
+    display: inline-flexbox;
     flex-direction: column;
     width: 70%;
     border: 1px solid black;
