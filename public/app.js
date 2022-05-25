@@ -58,9 +58,12 @@ const createList = (arr) => {
 
 const createListItem = (elem) => {
     const div = document.createElement('div');
-    div.id = elem.exercise_id;
+    div.id = elem.workout_id;
     div.className = 'exercises'
-    div.textContent = elem.exercise_name; 
+    div.innerHTML = `
+    <h2>${elem.workout_id}</h2>
+    <h3>Name: ${elem.exercise_name} Sets: ${elem.sets} X Reps: ${elem.reps_time} Rest Cycle: ${elem.rest_cycle}.</h3>
+    `; 
     workouts.append(div)
 };
 
