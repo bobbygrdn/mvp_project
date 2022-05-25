@@ -50,8 +50,8 @@ const workout = async () => {
     createList(result);
 }
 
-const createList = (arr) => {
-    arr.forEach((elem) => {
+const createList = (result) => {
+    result.forEach((elem) => {
         createExercise(elem);
     })
 }
