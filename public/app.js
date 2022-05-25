@@ -38,7 +38,7 @@ const buttonDev = () => {
 
                 calendarhtml += htmlSegment;
             });
-            history.innerHTML + calendarhtml;
+            history.innerHTML += calendarhtml;
         });
     });
 
