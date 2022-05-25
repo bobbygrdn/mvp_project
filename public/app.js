@@ -59,7 +59,7 @@ const buttonDev = () => {
         .then(data => {
             data.forEach(data => {
                 let htmlSegment = `
-                <div class='list'>
+                <div class='current'>
                 <h2>${data.list_id}</h2>
                 <h3>${data.exercise_name}</h3>
                 `;
