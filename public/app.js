@@ -147,7 +147,7 @@ const historyForm = (form) => {
     })
     addDate.style.display = 'block';
     
-    const deleteD = (form) => {
+    const deleteDay = (form) => {
         let calendar_id = form.calendar_id.value;
         const dropurl = `https://desolate-reef-75349.herokuapp.com/api/calendar/${calendar_id}`
     
