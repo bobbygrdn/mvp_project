@@ -124,7 +124,7 @@ const historyForm = (form) => {
     let month = form.month.value;
     let day = form.day.value;
     let year = form.year.value;
-    console.log(calendar_id, month, day, year)
+    console.log(month, day, year)
 }
 
 const exerciseForm = (form) => {
