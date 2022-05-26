@@ -138,7 +138,7 @@ const createListItem = (elem) => {
     div.addEventListener('click', (e) => [
         console.log(e.currentTarget.id)
         // changeWorkoutForm()
-    ])
+    ]);
     workouts.appendChild(div)
 };
 
@@ -148,7 +148,7 @@ const createListItem = (elem) => {
 
 const changeWorkoutForm = (e) => {
     changeWorkout.style.display = 'none';
-    let exercise_id = e.path[1].id;
+    let exercise_id = e.currentTarget.id;
     let exerciseName = form.exercise_name.value; 
     let sets = form.sets.value;
     let reps = form.reps.value;
