@@ -157,6 +157,11 @@ const changeWorkoutForm = (form) => {
     let reps = form.reps.value;
     let rest = form.rest.value;
 
+    form.exercise_name.value = '';
+    form.sets.value = '';
+    form.reps.value = '';
+    form.rest.value = '';
+
     const workouturl = `https://desolate-reef-75349.herokuapp.com/api/workout/${exercise_id}`;
 
     let data = {
@@ -187,6 +192,7 @@ const historyForm = (form) => {
     let month = form.month.value;
     let day = form.day.value;
     let year = form.year.value;
+
     form.month.value = '';
     form.day.value = '';
     form.year.value = '';
@@ -220,6 +226,8 @@ const deleteDay = (form) => {
     let calendar_id = form.history_date.value;
     const dropurl = `https://desolate-reef-75349.herokuapp.com/api/calendar/${calendar_id}`
     
+    form.history_date.value = '';
+
     let data = {
         calendar_id: `${calendar_id}`
      }
@@ -250,6 +258,12 @@ const exerciseForm = (form) => {
     let muscle_group = form.muscle_group.value;
     let reps_time_interval = form.reps_time_interval.value;
     let equipment_needed = form.equipment_needed.value;
+
+    form.exercise_name.value = '';
+    form.type_of.value = '';
+    form.muscle_group.value = '';
+    form.reps_time_interval.value = '';
+    form.equipment_needed.value = '';
 
     const exerciseurl = 'https://desolate-reef-75349.herokuapp.com/api/exercise'
 
@@ -282,6 +296,8 @@ const deleteEx = (form) => {
     let exercise_id = form.exercise_id.value;
     const dropurl = `https://desolate-reef-75349.herokuapp.com/api/exercise/${exercise_id}`
 
+    form.exercise_id.value = '';
+
     let data = {
         exercise_id: `${exercise_id}`
     }
@@ -312,6 +328,11 @@ const workoutForm = (form) => {
     let reps = form.reps.value;
     let rest = form.rest.value;
     
+    form.exercise_name.value = ''; 
+    form.sets.value = '';
+    form.reps.value = '';
+    form.rest.value = '';
+
     const workouturl = 'https://desolate-reef-75349.herokuapp.com/api/workout'
 
     let data = {
@@ -342,6 +363,8 @@ const deleteW = (form) => {
     dropExercise.style.display = 'none';
     let workout_id = form.exercise_id.value;
     const dropurl = `https://desolate-reef-75349.herokuapp.com/api/workout/${workout_id}`
+
+    form.exercise_id.value = '';
 
     let data = {
         workout_id: `${workout_id}`
