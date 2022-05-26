@@ -147,7 +147,7 @@ const createListItem = (elem) => {
 
 const changeWorkoutForm = (form) => {
     changeWorkout.style.display = 'none';
-    let exercise_id = target;
+    let exercise_id = e.currentTarget.id;
     let exerciseName = form.exercise_name.value; 
     let sets = form.sets.value;
     let reps = form.reps.value;
