@@ -126,7 +126,6 @@ const createList = (arr) => {
 const createListItem = (elem) => {
     const div = document.createElement('div');
     div.id = elem.workout_id;
-    div.className = 'exercises'
     div.innerHTML = `
     <h2>${elem.workout_id}</h2>
     <h3>Name: ${elem.exercise_name} Sets: ${elem.sets} X Reps: ${elem.reps_time} Rest Cycle: ${elem.rest_cycle}.</h3>
@@ -269,7 +268,6 @@ const createLog = (arr) => {
 const createLogItem = (elem) => {
     const div = document.createElement('div');
     div.id = elem.calendar_id;
-    div.className = 'dates'
     div.innerHTML = `
     <h2>${elem.calendar_id}</h2>
     <h3>${elem.month} ${elem.day} ${elem.year}
@@ -293,7 +291,6 @@ const createExerciseList = (arr) => {
 const createExerciseListItem = (elem) => {
     const div = document.createElement('div');
     div.id = elem.exercise_id;
-    div.className = 'exerciseList'
     div.innerHTML = `
     <h2>${elem.exercise_id}</h2>
     <h3>${elem.exercise_name}</h3>
