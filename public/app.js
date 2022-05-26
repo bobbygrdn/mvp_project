@@ -201,6 +201,7 @@ const exerciseForm = (form) => {
     let muscle_group = form.muscle_group.value;
     let reps_time_interval = form.reps_time_interval.value;
     let equipment_needed = form.equipment_needed.value;
+    console.log(exercise_name)
 
     const exerciseurl = 'https://desolate-reef-75349.herokuapp.com/api/exercise'
 
