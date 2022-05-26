@@ -293,7 +293,7 @@ const createExerciseList = (arr) => {
 const createExerciseListItem = (elem) => {
     const div = document.createElement('div');
     div.id = elem.exercise_id;
-    div.className = 'exercises'
+    div.className = 'exerciseList'
     div.innerHTML = `
     <h2>${elem.exercise_id}</h2>
     <h3>${elem.exercise_name}</h3>
