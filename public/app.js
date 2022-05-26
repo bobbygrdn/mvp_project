@@ -19,7 +19,7 @@ const deleteE = document.querySelector('#drop_exercise');
 
 //Containers
 const history = document.querySelector('.history');
-const exercises = document.querySelector('.exercises');
+const exerciseItems = document.querySelector('.exerciseItems');
 const currentplan = document.querySelector('.currentplan');
 const workouts = document.querySelector('.workouts');
 const user = document.querySelector('.user');
@@ -42,7 +42,7 @@ const buttonDev = () => {
         currentplan.style.display = 'none';
         workouts.style.display = 'none';
         user.style.display = 'none';
-        exercises.style.display = 'none';
+        exerciseList.style.display = 'none';
         history.style.display = 'block';
     })
 
