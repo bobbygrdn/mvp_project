@@ -119,7 +119,7 @@ const createListItem = (elem) => {
 };
 
 //Form Helper Functions
-const historyForm = () => {
+const historyForm = (form) => {
     historyInput.style.display = 'none'
     let calendar_id = form.calendar_id.value;
     let month = form.month.value;
@@ -128,7 +128,7 @@ const historyForm = () => {
     console.log(calendar_id, month, day, year)
 }
 
-const exerciseForm = () => {
+const exerciseForm = (form) => {
     exerciseInput.style.display = 'none'
 }
 
