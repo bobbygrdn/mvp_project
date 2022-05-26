@@ -134,13 +134,27 @@ const createListItem = (elem) => {
     `; 
     div.className = 'workout_items'
     div.style.cursor = 'pointer'
-    div.addEventListener('click', (e) => [
-        console.log(div)
+    div.addEventListener('click', () => [
+        console.log(e.target.id)
+        // changeWorkoutForm()
     ])
     workouts.appendChild(div)
 };
 
 //Form Helper Functions
+
+//User Profile Edit Exercises Form
+
+const changeWorkoutForm = (e) => {
+    change_workout_input.style.display = 'none';
+    let exercise_id = e.target.id
+    let exerciseName = form.exercise_name.value; 
+    let sets = form.sets.value;
+    let reps = form.reps.value;
+    let rest = form.rest.value;
+
+    const workouturl = '';
+};
 
 //Calendar Create Date Form
 const historyForm = (form) => {
