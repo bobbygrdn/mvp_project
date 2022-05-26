@@ -289,6 +289,7 @@ const workoutForm = (form) => {
 
 //User Profile Drop Exercise
 const deleteW = (form) => {
+    dropExercise.style.display = 'none';
     let workout_id = form.workout_id.value;
     const dropurl = `https://desolate-reef-75349.herokuapp.com/api/workout/${workout_id}`
 
@@ -309,8 +310,9 @@ const deleteW = (form) => {
         alert('Exercise Dropped!');
     })
 
-    addExercise.style.display = 'block'
-}
+    addExercise.style.display = 'block';
+    dropExercise.style.display = 'block';
+};
 
 //Calendar Creation
 const log = async () => {
