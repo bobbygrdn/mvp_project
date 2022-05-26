@@ -26,7 +26,7 @@ const workouts = document.querySelector('.workouts');
 const user = document.querySelector('.user');
 
 //Helper variables
-const currentId = 0;
+let currentId = 0;
 
 const startUp = () => {
     startData();
@@ -187,6 +187,7 @@ const historyForm = (form) => {
     let month = form.month.value;
     let day = form.day.value;
     let year = form.year.value;
+    form.value = '';
 
     const calendarurl = 'https://desolate-reef-75349.herokuapp.com/api/calendar'
 
