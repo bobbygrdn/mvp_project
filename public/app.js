@@ -78,7 +78,7 @@ const buttonDev = () => {
     dropDate.addEventListener('click', () => {
         addDate.style.display = 'none';
         dropDate.style.display = 'none';
-
+        dropHistory.style.dispaly = 'block';
     })
 }
 
