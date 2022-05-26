@@ -290,7 +290,7 @@ const createExerciseList = (arr) => {
     })
 }
 
-const createExerciseListItem = () => {
+const createExerciseListItem = (elem) => {
     const div = document.createElement('div');
     div.id = elem.exercise_id;
     div.className = 'exercises'
