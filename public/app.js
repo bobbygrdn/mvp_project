@@ -293,11 +293,11 @@ const createExerciseListItem = (elem) => {
     div.id = elem.exercise_id;
     div.innerHTML = `
     <h2>${elem.exercise_id}</h2>
-    <h3>${elem.exercise_name}</h3>
-    <h3>${elem.type_of}</h3>
-    <h3>${elem.muscle_group}</h3>
-    <h3>${elem.reps_time_interval}</h3>
-    <h3>${elem.equipment_needed}</h3>
+    <h3>Exercise Name: ${elem.exercise_name}</h3>
+    <h3>Exercise Type: ${elem.type_of}</h3>
+    <h3>Muscle Group(s): ${elem.muscle_group}</h3>
+    <h3>Reps/Time/interval: ${elem.reps_time_interval}</h3>
+    <h3>Equipment Needed: ${elem.equipment_needed}</h3>
      `; 
     exerciseItems.appendChild(div)
 }
