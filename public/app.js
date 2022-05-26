@@ -42,7 +42,7 @@ const buttonDev = () => {
         currentplan.style.display = 'none';
         workouts.style.display = 'none';
         user.style.display = 'none';
-        list.style.display = 'none';
+        exerciseItems.style.display = 'none';
         history.style.display = 'block';
     })
 
