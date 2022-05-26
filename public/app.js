@@ -27,6 +27,7 @@ const user = document.querySelector('.user');
 const startUp = () => {
     startData();
     log();
+    exerciseList();
     buttonDev();
 }
 
@@ -275,5 +276,33 @@ const createLogItem = (elem) => {
     `; 
     history.appendChild(div)
 };
+
+//Exercise List Creation
+const exerciseList = async () => {
+    const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/exercise')
+    const result = await data.json()
+    createExerciseList(result);
+}
+
+const createExerciseList = (arr) => {
+    arr.forEach((elem) => {
+        createExerciseListItem(elem)
+    })
+}
+
+const createExerciseListItem = () => {
+    const div = document.createElement('div');
+    div.id = elem.exercise_id;
+    div.className = 'exercises'
+    div.innerHTML = `
+    <h2>${elem.exercise_id}</h2>
+    <h3>${elem.exercise_name}</h3>
+    <h3>${elem.type_of}</h3>
+    <h3>${elem.muscle_group}</h3>
+    <h3>${elem.reps_time_interval}</h3>
+    <h3>${elem.equipment_needed}</h3>
+     `; 
+    exercises.appendChild(div)
+}
   
 startUp();
