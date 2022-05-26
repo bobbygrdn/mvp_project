@@ -170,7 +170,7 @@ const historyForm = (form) => {
 
 //Calendar Delete Day Form
 const deleteDay = (form) => {
-    let calendar_id = form.calendar_id.value;
+    let calendar_id = form.history_date.value;
     const dropurl = `https://desolate-reef-75349.herokuapp.com/api/exercise/${exercise_id}`
     
     let data = {
