@@ -195,13 +195,13 @@ app.get("/api/exercise/:id", async (req,res) => {
 
 app.post("/api/exercise", async (req,res) => {
     let obj = req.body;
-    if(obj.exercise_name === '' || obj.type_of === '' || obj.muscle_group === '' || obj.reps_time_interval === '' || obj.instructions === '' || obj.equipment_needed === '') {
+    if(obj.exercise_name === '' || obj.type_of === '' || obj.muscle_group === '' || obj.reps_time_interval === '' || obj.equipment_needed === '') {
         res.statusCode = 404;
         res.header('Content-Type', 'text/plain');
-        res.end("Please insert Name, Sets, Reps, Rest Cycle, Instructions, Equipment Needed")
+        res.end("Please insert Name, Sets, Reps, Rest Cycle, Equipment Needed")
     } else {
         try {
-            const data = await db.query(`INSERT INTO exercise (exercise_name, type_of, muscle_group,reps_time_interval, instructions, equipment_needed) VALUES('${obj.exercise_name}', '${obj.type_of}', '${obj.muscle_group}', '${obj.reps_time_interval}', '${obj.instructions}', '${obj.equipment_needed}');`)
+            const data = await db.query(`INSERT INTO exercise (exercise_name, type_of, muscle_group,reps_time_interval, equipment_needed) VALUES('${obj.exercise_name}', '${obj.type_of}', '${obj.muscle_group}', '${obj.reps_time_interval}', '${obj.equipment_needed}');`)
             res.send('Exercise Created!');
         } catch (err) {
             console.error(err.message);
@@ -238,13 +238,6 @@ app.patch("/api/exercise/:id", async (req,res) => {
         try {
             const data = await db.query(`UPDATE exercise SET reps_time_interval = '${obj.reps_time_interval}' WHERE exercise_id = '${id}';`)
             res.send("Updated Reps/Time/interval");
-        } catch (err) {
-            console.error(err.message)
-        }
-    } else if(obj.instructions) {
-        try {
-            const data = await db.query(`UPDATE exercise SET instructions = '${obj.instructions}' WHERE exercise_id = '${id}';`)
-            res.send("Updated Instructions");
         } catch (err) {
             console.error(err.message)
         }
