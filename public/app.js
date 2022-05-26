@@ -51,7 +51,7 @@ const buttonDev = () => {
         workouts.style.display = 'none';
         user.style.display = 'none';
         history.style.display = 'none';
-        exercises.style.display = 'block';
+        exerciseItems.style.display = 'block';
     })
 
     profile.addEventListener('click', () => {
@@ -59,7 +59,7 @@ const buttonDev = () => {
         workouts.style.display = 'block';
         user.style.display = 'block';
         history.style.display = 'none';
-        exercises.style.display = 'none';
+        exerciseItems.style.display = 'none';
     })
 
     addExercise.addEventListener('click', () => {
@@ -302,7 +302,7 @@ const createExerciseListItem = (elem) => {
     <h3>${elem.reps_time_interval}</h3>
     <h3>${elem.equipment_needed}</h3>
      `; 
-    exercises.appendChild(div)
+    exerciseItems.appendChild(div)
 }
   
 startUp();
