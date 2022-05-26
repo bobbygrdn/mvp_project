@@ -52,6 +52,15 @@
         <button id="createExercise" class="button" >Add Exercise</button>
         <button id="deleteExercise" class="button" >Drop Exercise</button>
 
+        <form id="change_exercise" name="change_exercise">
+            <input type="text" name="exercise_name" value="" placeholder="Exercise Name">
+            <input type="text" name="type_of" value="" placeholder="Exercise Type">
+            <input type="text" name="muscle_group" value="" placeholder="Muscle Group">
+            <input type="text" name="reps_time_interval" value="" placeholder="Reps, Time or Interval cycle">
+            <input type="text" name="equipment_needed" value="" placeholder="Equipment Needed">
+            <input type="button" name="button" value="Add Exercise" onClick="changeExerciseInput(this.form)">
+        </form>
+
         <form id="exercise_input" name="exercise_input">
             <input type="text" name="exercise_name" value="" placeholder="Exercise Name">
             <input type="text" name="type_of" value="" placeholder="Exercise Type">

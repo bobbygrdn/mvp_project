@@ -17,6 +17,7 @@ const deleteWorkout = document.querySelector('#drop_input');
 const dropHistory = document.querySelector('#drop_history');
 const deleteE = document.querySelector('#drop_exercise');
 const changeWorkout = document.querySelector('#change_workout_input');
+const changeExercise = document.querySelector('#change_exercise');
 
 //Containers
 const history = document.querySelector('.history');
@@ -174,6 +175,46 @@ const changeWorkoutForm = (form) => {
         sets: `${sets}`,
         reps_time: `${reps}`,
         rest_cycle: `${rest}`
+    }
+
+    let fetchData = {
+        method: "PATCH",
+        body: JSON.stringify(data),
+        headers: new Headers({
+            'Content-Type': 'application/json; charset=UTF-8'
+        })
+    }
+
+    fetch(workouturl, fetchData)
+    .then(() => {
+        alert('Exercise Changed!');
+    })
+
+};
+
+const changeExerciseInput = (form) => {
+    changeExercise.style.display = 'none';
+    let exercise_id = currentId;
+    let exerciseName = form.exercise_name.value; 
+    let type_of = form.type_of.value;
+    let muscle_group = form.muscle_group.value;
+    let reps_time_interval = form.reps_time_interval.value;
+    let equipment_needed = form.equipment_needed.value;
+
+    form.exercise_name.value = '';
+    form.type_of.value = '';
+    form.muscle_group.value = '';
+    form.reps_time_interval.value = '';
+    form.equipment_needed.value = '';
+
+    const workouturl = `https://desolate-reef-75349.herokuapp.com/api/exercise/${exercise_id}`;
+
+    let data = {
+        exercise_name: `${exerciseName}`,
+        type_of: `${type_of}`,
+        muscle_group: `${muscle_group}`,
+        reps_time_interval: `${reps_time_interval}`,
+        equipment_needed: `${equipment_needed}`
     }
 
     let fetchData = {
@@ -440,6 +481,12 @@ const createExerciseListItem = (elem) => {
     <h3>Reps/Time/interval: ${elem.reps_time_interval}</h3>
     <h3>Equipment Needed: ${elem.equipment_needed}</h3>
      `; 
+     div.className = 'exercise_items'
+     div.style.cursor = 'pointer'
+     div.addEventListener('click', (e) => {
+         currentId = e.currentTarget.id;
+         changeExercise.style.display = 'block';
+    })
     exerciseItems.appendChild(div)
 }
   
