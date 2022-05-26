@@ -51,6 +51,8 @@ const buttonDev = () => {
         workouts.style.display = 'none';
         user.style.display = 'none';
         history.style.display = 'none';
+        createExercise.style.display = 'block';
+        deleteExercise.style.display = 'block';
         exerciseItems.style.display = 'block';
     })
 
