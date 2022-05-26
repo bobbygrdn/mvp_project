@@ -130,7 +130,7 @@ const historyForm = (form) => {
     let data = {
         month: `${month}`,
         day: `${day}`,
-        year: `${yaer}`
+        year: `${year}`
     }
 
     let fetchData = {
