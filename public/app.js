@@ -187,7 +187,9 @@ const historyForm = (form) => {
     let month = form.month.value;
     let day = form.day.value;
     let year = form.year.value;
-    form.value = '';
+    form.month.value = '';
+    form.day.value = '';
+    form.year.value = '';
 
     const calendarurl = 'https://desolate-reef-75349.herokuapp.com/api/calendar'
 
