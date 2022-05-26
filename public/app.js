@@ -285,8 +285,9 @@ const workoutForm = (form) => {
         .then(() => {
             alert('Exercise Added!');
         })
-        addExercise.style.display = 'block'
-}
+        addExercise.style.display = 'block';
+        dropExercise.style.display = 'block';
+};
 
 //User Profile Drop Exercise
 const deleteW = (form) => {
@@ -298,6 +299,7 @@ const deleteW = (form) => {
         workout_id: `${workout_id}`
     }
 
+    console.log(data)
     let fetchData = {
         method: 'DELETE',
         body: JSON.stringify(data),
