@@ -6,6 +6,8 @@ const addExercise = document.querySelector('#addExercise');
 const dropExercise = document.querySelector('#dropExercise')
 const addDate = document.querySelector('#addDate');
 const dropDate = document.querySelector('#dropDate');
+const createExercise = document.querySelector('#createExercise');
+const deleteExercise = document.querySelector('#deleteExercise');
 
 //Forms
 const historyInput = document.querySelector('#history_input');
@@ -13,6 +15,7 @@ const exerciseInput = document.querySelector('#exercise_input');
 const workoutInput = document.querySelector('#workout_input');
 const deleteWorkout = document.querySelector('#drop_input');
 const dropHistory = document.querySelector('#drop_history');
+const deleteE = document.querySelector('#drop_exercise');
 
 //Containers
 const history = document.querySelector('.history');
@@ -80,6 +83,18 @@ const buttonDev = () => {
         dropDate.style.display = 'none';
         dropHistory.style.display = 'block';
     })
+
+    createExercise.addEventListener('click', () => {
+        createExercise.style.display = 'none';
+        deleteExercise.style.display = 'none';
+        exerciseInput.style.display = 'block';
+    })
+
+    deleteExercise.addEventListener('click', () => {
+        createExercise.style.display = 'none';
+        deleteExercise.style.display = 'none';
+        deleteE.style.display = 'block';
+    })
 }
 
 //Start Data Helper Functions
@@ -119,6 +134,8 @@ const createListItem = (elem) => {
 };
 
 //Form Helper Functions
+
+//Calendar Create Date Form
 const historyForm = (form) => {
     historyInput.style.display = 'none'
     let month = form.month.value;
@@ -146,7 +163,8 @@ const historyForm = (form) => {
         alert('Date Added!');
     })
     addDate.style.display = 'block';
-    
+
+    //Calendar Delete Day Form
     const deleteDay = (form) => {
         let calendar_id = form.calendar_id.value;
         const dropurl = `https://desolate-reef-75349.herokuapp.com/api/calendar/${calendar_id}`
