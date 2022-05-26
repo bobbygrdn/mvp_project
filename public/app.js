@@ -4,12 +4,15 @@ const list = document.querySelector('.list');
 const profile = document.querySelector('.profile');
 const addExercise = document.querySelector('#addExercise');
 const dropExercise = document.querySelector('#dropExercise')
+const addDate = document.querySelector('#addDate');
+const dropDate = document.querySelector('#dropDate');
 
 //Forms
 const historyInput = document.querySelector('#history_input');
 const exerciseInput = document.querySelector('#exercise_input');
 const workoutInput = document.querySelector('#workout_input');
-const dropInput = document.querySelector('#drop_input');
+const deleteWorkout = document.querySelector('#drop_input');
+const dropHistory = document.querySelector('#drop_history');
 
 //Containers
 const history = document.querySelector('.history');
@@ -63,7 +66,19 @@ const buttonDev = () => {
 
     dropExercise.addEventListener('click', () => {
         addExercise.style.display = 'none';
-        dropInput.style.display = 'block';
+        deleteWorkout.style.display = 'block';
+    })
+
+    addDate.addEventListener('click', () => {
+        addDate.style.display = 'none';
+        dropDate.style.display = 'none';
+        historyInput.style.display = 'block';
+    })
+
+    dropDate.addEventListener('click', () => {
+        addDate.style.display = 'none';
+        dropDate.style.display = 'none';
+
     })
 }
 
@@ -146,7 +161,7 @@ const workoutForm = (form) => {
 }
 
 //User Profile Drop Exercise
-const dropForm = (form) => {
+const deleteW = (form) => {
     let workout_id = form.exercise_name.value;
     const dropurl = `https://desolate-reef-75349.herokuapp.com/api/workout/${workout_id}`
 

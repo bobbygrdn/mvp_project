@@ -28,11 +28,21 @@
     </div>
 
     <div class="history">
+        <h1>History!</h1>
+        <button id="addDate" class="button" >Add Date</button>
+        <button id="dropDate" class="button" >Drop Date</button>
+
         <form id="history_input" name="history_input">
             <input type="text" name="day" value="" placeholder="Day">
             <input type="text" name="month" value="" placeholder="Month">
             <input type="text" name="year" value="" placeholder="Year">
             <input type="button" name="button" value="Add Exercise" onClick="historyForm(this.form)">
+        </form>
+
+        <form id="drop_history" name="drop_history">
+            <input type="text" name="history_date" value=""
+            placeholder="Date Id">
+            <input type="button" name="button" value="Drop Date" onClick="deleteD(this.form)">
         </form>
     </div>
 
@@ -43,6 +53,12 @@
             <input type="text" name="reps" value="" placeholder="Number of reps/time">
             <input type="text" name="rest" value="" placeholder="Rest cycle">
             <input type="button" name="button" value="Add Exercise" onClick="exerciseForm(this.form)">
+        </form>
+
+        <form id="drop_exercise" name="drop_exercise">
+            <input type="text" name="exercise_name" value=""
+            placeholder="Exercise Id">
+            <input type="button" name="button" value="Drop Exercise" onClick="deleteE(this.form)">
         </form>
     </div>
 
@@ -63,7 +79,7 @@
         <form id="drop_input" name="drop_input">
             <input type="text" name="exercise_name" value=""
             placeholder="Exercise Id">
-            <input type="button" name="button" value="Drop Exercise" onClick="dropForm(this.form)">
+            <input type="button" name="button" value="Drop Exercise" onClick="deleteW(this.form)">
         </form>
 
     </div>
