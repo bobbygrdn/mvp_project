@@ -71,7 +71,12 @@ const buttonDev = () => {
     addExercise.addEventListener('click', () => {
         addExercise.style.display = 'none';
         dropExercise.style.display = 'none';
-        workoutInput.style.display = 'block';
+        if(workoutInput.style.display = 'none') {
+            workoutInput.style.display = 'block';
+        } else {
+            workoutInput.style.display = 'none';
+        }
+
     })
 
     dropExercise.addEventListener('click', () => {
