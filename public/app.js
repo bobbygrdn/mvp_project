@@ -145,7 +145,31 @@ const historyForm = (form) => {
     .then(() => {
         alert('Date Added!');
     })
-    addDate.style.display = 'block'
+    addDate.style.display = 'block';
+    
+    const deleteD = (form) => {
+        let calendar_id = form.calendar_id.value;
+        const dropurl = `https://desolate-reef-75349.herokuapp.com/api/calendar/${calendar_id}`
+    
+        let data = {
+            calendar_id: `${calendar_id}`
+        }
+    
+        let fetchData = {
+            method: 'DELETE',
+            body: JSON.stringify(data),
+            headers: new Headers({
+                'Content-Type': 'application/json; charset=UTF-8'
+            })
+        }
+    
+        fetch(dropurl, fetchData)
+        .then(() => {
+            alert('Date Dropped!');
+        })
+    
+        addDate.style.display = 'block'
+    }
 }
 
 const exerciseForm = (form) => {
@@ -187,7 +211,7 @@ const workoutForm = (form) => {
 
 //User Profile Drop Exercise
 const deleteW = (form) => {
-    let workout_id = form.exercise_name.value;
+    let workout_id = form.workout_id.value;
     const dropurl = `https://desolate-reef-75349.herokuapp.com/api/workout/${workout_id}`
 
     let data = {
