@@ -121,6 +121,11 @@ const createListItem = (elem) => {
 //Form Helper Functions
 const historyForm = () => {
     historyInput.style.display = 'none'
+    let calendar_id = form.calendar_id.value;
+    let month = form.month.value;
+    let day = form.day.value;
+    let year = form.year.value;
+    console.log(calendar_id, month, day, year)
 }
 
 const exerciseForm = () => {
