@@ -165,33 +165,33 @@ const historyForm = (form) => {
         alert('Date Added!');
     })
     addDate.style.display = 'block';
+};
 
-    //Calendar Delete Day Form
-    const deleteDay = (form) => {
-        let calendar_id = form.calendar_id.value;
-        const dropurl = `https://desolate-reef-75349.herokuapp.com/api/calendar/${calendar_id}`
+//Calendar Delete Day Form
+const deleteDay = (form) => {
+    let calendar_id = form.calendar_id.value;
+    const dropurl = `https://desolate-reef-75349.herokuapp.com/api/exercise/${exercise_id}`
     
-        let data = {
-            calendar_id: `${calendar_id}`
-        }
+    let data = {
+        calendar_id: `${calendar_id}`
+     }
     
-        let fetchData = {
-            method: 'DELETE',
-            body: JSON.stringify(data),
-            headers: new Headers({
-                'Content-Type': 'application/json; charset=UTF-8'
-            })
-        }
-    
-        fetch(dropurl, fetchData)
-        .then(() => {
-            alert('Date Dropped!');
+    let fetchData = {
+        method: 'DELETE',
+        body: JSON.stringify(data),
+        headers: new Headers({
+            'Content-Type': 'application/json; charset=UTF-8'
         })
-    
-        addDate.style.display = 'block';
-        dropDate.style.display = 'block';
     }
-}
+    
+    fetch(dropurl, fetchData)
+    .then(() => {
+        alert('Date Dropped!');
+    })
+    
+    addDate.style.display = 'block';
+    dropDate.style.display = 'block';
+};
 
 //Exercise List Add Exercise Form
 const exerciseForm = (form) => {
