@@ -204,7 +204,7 @@ const createLogItem = (elem) => {
     div.className = 'dates'
     div.innerHTML = `
     <h2>${elem.calendar_id}</h2>
-    <h3>${elem.month} ${elem.month} ${elem.year}
+    <h3>${elem.month} ${elem.day} ${elem.year}
     `; 
     history.appendChild(div)
 };
