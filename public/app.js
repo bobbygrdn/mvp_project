@@ -223,7 +223,8 @@ const exerciseForm = (form) => {
     .then(() => {
         alert('Exercise Added!');
     })
-    createExercise.style.display = 'block'
+    createExercise.style.display = 'block';
+    deleteExercise.style.display= 'block';
 }
 
 
