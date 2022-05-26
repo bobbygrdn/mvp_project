@@ -181,3 +181,8 @@ h2 {
 #deleteExercise {
     display: none;
 }
+
+.workout_items:hover {
+    color:white;
+    background: black;
+}
