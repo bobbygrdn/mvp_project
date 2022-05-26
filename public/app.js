@@ -72,6 +72,7 @@ const buttonDev = () => {
 
     dropExercise.addEventListener('click', () => {
         addExercise.style.display = 'none';
+        dropExercise.style.display = 'none';
         deleteWorkout.style.display = 'block';
     })
 
