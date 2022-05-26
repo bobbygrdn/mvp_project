@@ -182,6 +182,10 @@ h2 {
     display: none;
 }
 
+#change_workout_input {
+    display: none;
+}
+
 .workout_items:hover {
     color:white;
 }
