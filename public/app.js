@@ -51,8 +51,8 @@ const buttonDev = () => {
         workouts.style.display = 'none';
         user.style.display = 'none';
         history.style.display = 'none';
-        createExercise.style.display = 'block';
-        deleteExercise.style.display = 'block';
+        createExercise.style.display = 'inline-block';
+        deleteExercise.style.display = 'inline-block';
         exerciseItems.style.display = 'block';
     })
 
@@ -165,7 +165,7 @@ const historyForm = (form) => {
     .then(() => {
         alert('Date Added!');
     })
-    addDate.style.display = 'block';
+    addDate.style.display = 'inline-block';
 };
 
 //Calendar Delete Day Form
@@ -190,8 +190,8 @@ const deleteDay = (form) => {
         alert('Date Dropped!');
     })
     
-    addDate.style.display = 'block';
-    dropDate.style.display = 'block';
+    addDate.style.display = 'inline-block';
+    dropDate.style.display = 'inline-block';
 };
 
 //Exercise List Add Exercise Form
@@ -226,8 +226,8 @@ const exerciseForm = (form) => {
     .then(() => {
         alert('Exercise Added!');
     })
-    createExercise.style.display = 'block';
-    deleteExercise.style.display= 'block';
+    createExercise.style.display = 'inline-block';
+    deleteExercise.style.display= 'inline-block';
 }
 
 //Exercise List Delete Exercise Form
@@ -252,8 +252,8 @@ const deleteEx = (form) => {
         alert('Exercise Dropped!');
     })
 
-    addExercise.style.display = 'block';
-    deleteExercise.style.display = 'block';
+    addExercise.style.display = 'inline-block';
+    deleteExercise.style.display = 'inline-block';
 }
 
 //User Profile Create Exercise
@@ -285,8 +285,8 @@ const workoutForm = (form) => {
         .then(() => {
             alert('Exercise Added!');
         })
-        addExercise.style.display = 'block';
-        dropExercise.style.display = 'block';
+        addExercise.style.display = 'inline-block';
+        dropExercise.style.display = 'inline-block';
 };
 
 //User Profile Drop Exercise
@@ -312,8 +312,8 @@ const deleteW = (form) => {
         alert('Exercise Dropped!');
     })
 
-    addExercise.style.display = 'block';
-    dropExercise.style.display = 'block';
+    addExercise.style.display = 'inline-block';
+    dropExercise.style.display = 'inline-block';
     deleteWorkout.style.display = 'none';
 };
 
