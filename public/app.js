@@ -193,6 +193,7 @@ const historyForm = (form) => {
     }
 }
 
+//Exercise List Add Exercise Form
 const exerciseForm = (form) => {
     exerciseInput.style.display = 'none'
     let exercise_name = form.exercise_name.value;
@@ -227,6 +228,31 @@ const exerciseForm = (form) => {
     deleteExercise.style.display= 'block';
 }
 
+//Exercise List Delete Exercise Form
+const deleteEx = (form) => {
+    let exercise_id = form.exercise_id.value;
+    const dropurl = `https://desolate-reef-75349.herokuapp.com/api/workout/${exercise_id}`
+
+    let data = {
+        exercise_id: `${exercise_id}`
+    }
+
+    let fetchData = {
+        method: 'DELETE',
+        body: JSON.stringify(data),
+        headers: new Headers({
+            'Content-Type': 'application/json; charset=UTF-8'
+        })
+    }
+
+    fetch(dropurl, fetchData)
+    .then(() => {
+        alert('Exercise Dropped!');
+    })
+
+    addExercise.style.display = 'block';
+    deleteExercise.style.display = 'block';
+}
 
 //User Profile Create Exercise
 const workoutForm = (form) => {
