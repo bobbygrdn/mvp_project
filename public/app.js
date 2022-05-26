@@ -314,7 +314,7 @@ const deleteW = (form) => {
 
     addExercise.style.display = 'block';
     dropExercise.style.display = 'block';
-    deleteExercise.style.display = 'none';
+    deleteWorkout.style.display = 'none';
 };
 
 //Calendar Creation
