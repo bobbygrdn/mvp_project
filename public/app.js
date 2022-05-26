@@ -130,7 +130,6 @@ const createListItem = (elem) => {
     const div = document.createElement('div');
     div.id = elem.workout_id;
     div.innerHTML = `
-    <h2>${elem.workout_id}</h2>
     <h3>Name: ${elem.exercise_name} Sets: ${elem.sets} X Reps: ${elem.reps_time} Rest Cycle: ${elem.rest_cycle}.</h3>
     `; 
     div.className = 'workout_items'
