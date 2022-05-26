@@ -136,8 +136,7 @@ const createListItem = (elem) => {
     div.className = 'workout_items'
     div.style.cursor = 'pointer'
     div.addEventListener('click', (e) => {
-        let target = e.currentTarget.id;
-        changeWorkoutForm(target)
+        changeWorkout.style.display = 'block'
 });
     workouts.appendChild(div)
 };
@@ -146,7 +145,7 @@ const createListItem = (elem) => {
 
 //User Profile Edit Exercises Form
 
-const changeWorkoutForm = (target) => {
+const changeWorkoutForm = (form) => {
     changeWorkout.style.display = 'none';
     let exercise_id = target;
     let exerciseName = form.exercise_name.value; 
