@@ -16,6 +16,7 @@ const workoutInput = document.querySelector('#workout_input');
 const deleteWorkout = document.querySelector('#drop_input');
 const dropHistory = document.querySelector('#drop_history');
 const deleteE = document.querySelector('#drop_exercise');
+const changeWorkout = document.querySelector('#change_workout_input');
 
 //Containers
 const history = document.querySelector('.history');
@@ -135,7 +136,7 @@ const createListItem = (elem) => {
     div.className = 'workout_items'
     div.style.cursor = 'pointer'
     div.addEventListener('click', (e) => [
-        console.log(e.path[1].id)
+        console.log(e.composedPath)
         // changeWorkoutForm()
     ])
     workouts.appendChild(div)
@@ -146,14 +147,35 @@ const createListItem = (elem) => {
 //User Profile Edit Exercises Form
 
 const changeWorkoutForm = (e) => {
-    change_workout_input.style.display = 'none';
-    let exercise_id = e.target.id
+    changeWorkout.style.display = 'none';
+    let exercise_id = e.path[1].id;
     let exerciseName = form.exercise_name.value; 
     let sets = form.sets.value;
     let reps = form.reps.value;
     let rest = form.rest.value;
 
-    const workouturl = '';
+    const workouturl = `https://desolate-reef-75349.herokuapp.com/api/workout/${exercise_id}`;
+
+    let data = {
+        exercise_name: `${exerciseName}`,
+        sets: `${sets}`,
+        reps_time: `${reps}`,
+        rest_cycle: `${rest}`
+    }
+
+    let fetchData = {
+        method: "PATCH",
+        body: JSON.stringify(data),
+        headers: new Headers({
+            'Content-Type': 'application/json; charset=UTF-8'
+        })
+    }
+
+    fetch(workouturl, fetchData)
+    .then(() => {
+        alert('Exercise Changed!');
+    })
+
 };
 
 //Calendar Create Date Form
