@@ -188,7 +188,8 @@ const historyForm = (form) => {
             alert('Date Dropped!');
         })
     
-        addDate.style.display = 'block'
+        addDate.style.display = 'block';
+        dropDate.style.display = 'block';
     }
 }
 
