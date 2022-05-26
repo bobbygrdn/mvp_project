@@ -124,7 +124,28 @@ const historyForm = (form) => {
     let month = form.month.value;
     let day = form.day.value;
     let year = form.year.value;
-    console.log(month, day, year)
+
+    const calendarurl = 'https://desolate-reef-75349.herokuapp.com/api/calendar'
+
+    let data = {
+        month: `${month}`,
+        day: `${day}`,
+        year: `${yaer}`
+    }
+
+    let fetchData = {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: new Headers({
+            'Content-Type': 'application/json; charset=UTF-8'
+        })
+    }
+
+    fetch(calendarurl, fetchData)
+    .then(() => {
+        alert('Exercise Added!');
+    })
+    addDate.style.display = 'block'
 }
 
 const exerciseForm = (form) => {
