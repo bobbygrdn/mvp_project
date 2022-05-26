@@ -254,8 +254,9 @@ const deleteEx = (form) => {
         alert('Exercise Dropped!');
     })
 
-    addExercise.style.display = 'inline-block';
+    createExercise.style.display = 'inline-block';
     deleteExercise.style.display = 'inline-block';
+    deleteE.style.display = 'none';
 }
 
 //User Profile Create Exercise
