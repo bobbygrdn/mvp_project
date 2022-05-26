@@ -292,14 +292,13 @@ const workoutForm = (form) => {
 //User Profile Drop Exercise
 const deleteW = (form) => {
     dropExercise.style.display = 'none';
-    let workout_id = form.workout_id.value;
+    let workout_id = form.exercise_id.value;
     const dropurl = `https://desolate-reef-75349.herokuapp.com/api/workout/${workout_id}`
 
     let data = {
         workout_id: `${workout_id}`
     }
 
-    console.log(data)
     let fetchData = {
         method: 'DELETE',
         body: JSON.stringify(data),
