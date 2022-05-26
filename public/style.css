@@ -173,3 +173,11 @@ h2 {
 #drop_history {
     display: none;
 }
+
+#createExercise {
+    display: none;
+}
+
+#deleteExercise {
+    display: none;
+}
