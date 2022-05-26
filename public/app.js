@@ -231,7 +231,7 @@ const exerciseForm = (form) => {
 //Exercise List Delete Exercise Form
 const deleteEx = (form) => {
     let exercise_id = form.exercise_id.value;
-    const dropurl = `https://desolate-reef-75349.herokuapp.com/api/workout/${exercise_id}`
+    const dropurl = `https://desolate-reef-75349.herokuapp.com/api/exercise/${exercise_id}`
 
     let data = {
         exercise_id: `${exercise_id}`
