@@ -143,7 +143,7 @@ const historyForm = (form) => {
 
     fetch(calendarurl, fetchData)
     .then(() => {
-        alert('Exercise Added!');
+        alert('Date Added!');
     })
     addDate.style.display = 'block'
 }
