@@ -116,7 +116,7 @@ app.post("/api/workout", async (req,res) => {
         res.end("Please insert Name, Sets, Reps, Rest Cycle")
     } else {
         try {
-            const data = await db.query(`INSERT INTO workout (exercise_name, sets, reps_time, rest_cycle) VALUES('${obj.exercise_name}', '${obj.sets}', '${obj.reps_time}', '${obj.reps_cycle}');`)
+            const data = await db.query(`INSERT INTO workout (exercise_name, sets, reps_time, rest_cycle) VALUES('${obj.exercise_name}', '${obj.sets}', '${obj.reps_time}', '${obj.rest_cycle}');`)
             res.send('Exercise Created!');
         } catch (err) {
             console.error(err.message);
