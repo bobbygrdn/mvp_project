@@ -194,6 +194,35 @@ const historyForm = (form) => {
 
 const exerciseForm = (form) => {
     exerciseInput.style.display = 'none'
+    let exercise_name = form.exercise_name.value;
+    let type_of = form.type_of.value;
+    let muscle_group = form.muscle_group.value;
+    let reps_time_interval = form.reps_time_interval.value;
+    let equipment_needed = form.equipment_needed.value;
+
+    const exerciseurl = 'https://desolate-reef-75349.herokuapp.com/api/exercise'
+
+    let data = {
+        exercise_name: `${exercise_name}`,
+        type_of: `${type_of}`,
+        muscle_group: `${muscle_group}`,
+        reps_time_interval: `${reps_time_interval}`,
+        equipment_needed: `${equipment_needed}`,
+    }
+
+    let fetchData = {
+        method: 'Post',
+        body: JSON.stringify(data),
+        headers: new Headers({
+            'Content-Type': 'application/json; charset=UTF-8'
+        })
+    }
+
+    fetch(exerciseurl, fetchData)
+    .then(() => {
+        alert('Exercise Added!');
+    })
+    createExercise.style.display = 'block'
 }
 
 
