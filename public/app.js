@@ -166,6 +166,7 @@ const historyForm = (form) => {
         alert('Date Added!');
     })
     addDate.style.display = 'inline-block';
+    dropDate.style.display = 'inline-block';
 };
 
 //Calendar Delete Day Form
