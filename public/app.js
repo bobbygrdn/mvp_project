@@ -408,7 +408,7 @@ const workoutForm = (form) => {
 const deleteW = (form) => {
     dropExercise.style.display = 'none';
     let exercise_name = form.exercise_name.value;
-    const dropurl = `https://desolate-reef-75349.herokuapp.com/api/workout/${workout_id}`
+    const dropurl = `https://desolate-reef-75349.herokuapp.com/api/workout/${exercise_name}`
 
     form.exercise_name.value = '';
 
