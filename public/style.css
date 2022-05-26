@@ -186,6 +186,10 @@ h2 {
     display: none;
 }
 
+#change_exercise {
+    display: none;
+}
+
 .workout_items:hover {
     color:white;
 }
