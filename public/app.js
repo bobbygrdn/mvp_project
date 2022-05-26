@@ -133,6 +133,9 @@ const createListItem = (elem) => {
     <h2>${elem.workout_id}</h2>
     <h3>Name: ${elem.exercise_name} Sets: ${elem.sets} X Reps: ${elem.reps_time} Rest Cycle: ${elem.rest_cycle}.</h3>
     `; 
+    div.addEventListener('click', (e) => [
+        console.log(div)
+    ])
     workouts.appendChild(div)
 };
 
