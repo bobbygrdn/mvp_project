@@ -81,7 +81,7 @@ const buttonDev = () => {
 
     //User Profile Add Exercise button
     addExercise.addEventListener('click', () => {
-        if(addWorkoutShow) {
+        if(addWorkoutShow === false) {
             workoutInput.style.display = 'block';
             deleteWorkout.style.display = 'none';
             addWorkoutShow = true;
