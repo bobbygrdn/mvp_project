@@ -181,7 +181,6 @@ const plan = async () => {
 }
 
 const workout = async () => {
-    exercise.innerHTML = '';
     const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/workout')
     const result = await data.json()
     createList(result);
@@ -513,7 +512,6 @@ const deleteW = (form) => {
 
 //Calendar Creation
 const log = async () => {
-    historyLog.innerHTML = '';
     const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/calendar')
     const result = await data.json()
     createLog(result);
@@ -545,7 +543,6 @@ const createLogItem = (elem) => {
 
 //Exercise List Creation
 const exerciseList = async () => {
-    exerciseListItems.innerHTML = '';
     const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/exercise')
     const result = await data.json()
     createExerciseList(result);
