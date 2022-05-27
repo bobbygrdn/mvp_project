@@ -189,7 +189,7 @@ const changeWorkoutForm = (form) => {
     .then(() => {
         alert('Exercise Changed!');
     })
-
+    workout();
 };
 
 const changeExerciseInput = (form) => {
@@ -229,7 +229,7 @@ const changeExerciseInput = (form) => {
     .then(() => {
         alert('Exercise Changed!');
     })
-
+    exerciseList();
 };
 
 //Calendar Create Date Form
@@ -265,6 +265,7 @@ const historyForm = (form) => {
     })
     addDate.style.display = 'inline-block';
     dropDate.style.display = 'inline-block';
+    log();
 };
 
 //Calendar Delete Day Form
@@ -294,6 +295,7 @@ const deleteDay = (form) => {
     addDate.style.display = 'inline-block';
     dropDate.style.display = 'inline-block';
     dropHistory.style.display = 'none';
+    log();
 };
 
 //Exercise List Add Exercise Form
@@ -335,6 +337,7 @@ const exerciseForm = (form) => {
     })
     createExercise.style.display = 'inline-block';
     deleteExercise.style.display= 'inline-block';
+    exerciseList();
 }
 
 //Exercise List Delete Exercise Form
@@ -364,6 +367,7 @@ const deleteEx = (form) => {
     createExercise.style.display = 'inline-block';
     deleteExercise.style.display = 'inline-block';
     deleteE.style.display = 'none';
+    exerciseList();
 }
 
 //User Profile Create Exercise
