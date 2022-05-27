@@ -88,12 +88,22 @@ const buttonDev = () => {
         } else if(addWorkoutShow === true) {
             workoutInput.style.display = 'none';
             deleteWorkout.style.display = 'none';
+            addWorkoutShow = false;
         }
 
     })
 
     //User Profile Drop Exercise button
     dropExercise.addEventListener('click', () => {
+        if(dropWorkoutShow === false) {
+            workoutInput.style.display = 'none';
+            deleteWorkout.style.display = 'block';
+            dropWorkoutShow = true;
+        } else if(dropWorkoutShow === true) {
+            workoutInput.style.display = 'none';
+            deleteWorkout.style.display = 'none';
+            dropWorkoutShow = false;
+        }
         deleteWorkout.style.display = 'block';
         workoutInput.style.display = 'none';
     })
