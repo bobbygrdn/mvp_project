@@ -145,7 +145,8 @@ const createListItem = (elem) => {
     `; 
     div.className = 'workout_items'
     div.style.cursor = 'pointer'
-    div.addEventListener('click', () => {
+    div.addEventListener('click', (e) => {
+        currentId = e.currentTarget.id;
         changeWorkout.style.display = 'block'
 });
     exercise.appendChild(div)
