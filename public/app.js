@@ -187,7 +187,7 @@ const changeWorkoutForm = (form) => {
 
     fetch(workouturl, fetchData)
     .then(() => {
-        alert('Exercise Changed!');
+        console.log('Changed Exercise')
     })
     exercise.innerHTML = '';
     workout();
@@ -228,7 +228,7 @@ const changeExerciseInput = (form) => {
 
     fetch(workouturl, fetchData)
     .then(() => {
-        alert('Exercise Changed!');
+        console.log('Exercise Changed!');
     })
     exerciseList();
 };
@@ -262,7 +262,7 @@ const historyForm = (form) => {
 
     fetch(calendarurl, fetchData)
     .then(() => {
-        alert('Date Added!');
+        console.log('Date Added!');
     })
     addDate.style.display = 'inline-block';
     dropDate.style.display = 'inline-block';
@@ -290,7 +290,7 @@ const deleteDay = (form) => {
     
     fetch(dropurl, fetchData)
     .then(() => {
-        alert('Date Dropped!');
+        console.log('Date Dropped!');
     })
     
     addDate.style.display = 'inline-block';
@@ -334,7 +334,7 @@ const exerciseForm = (form) => {
 
     fetch(exerciseurl, fetchData)
     .then(() => {
-        alert('Exercise Added!');
+        console.log('Exercise Added!');
     })
     createExercise.style.display = 'inline-block';
     deleteExercise.style.display= 'inline-block';
@@ -362,7 +362,7 @@ const deleteEx = (form) => {
 
     fetch(dropurl, fetchData)
     .then(() => {
-        alert('Exercise Dropped!');
+        console.log('Exercise Dropped!');
     })
 
     createExercise.style.display = 'inline-block';
@@ -403,7 +403,7 @@ const workoutForm = (form) => {
 
     fetch(workouturl, fetchData)
         .then(() => {
-            alert('Exercise Added!');
+            console.log('Created Exercise');
         })
         addExercise.style.display = 'inline-block';
         dropExercise.style.display = 'inline-block';
@@ -433,7 +433,7 @@ const deleteW = (form) => {
 
     fetch(dropurl, fetchData)
     .then(() => {
-        alert('Exercise Dropped!');
+        console.log('Dropped Exercise');
     })
 
     addExercise.style.display = 'inline-block';
