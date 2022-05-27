@@ -204,7 +204,7 @@ const createListItem = (elem) => {
             changeWorkout.style.display = 'none'
             changeWorkoutShow = false;
         }
-});
+    });
     exercise.appendChild(div)
 };
 
