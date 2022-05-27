@@ -79,26 +79,18 @@ const buttonDev = () => {
     })
 
     addDate.addEventListener('click', () => {
-        addDate.style.display = 'none';
-        dropDate.style.display = 'none';
         historyInput.style.display = 'block';
     })
 
     dropDate.addEventListener('click', () => {
-        addDate.style.display = 'none';
-        dropDate.style.display = 'none';
         dropHistory.style.display = 'block';
     })
 
     createExercise.addEventListener('click', () => {
-        createExercise.style.display = 'none';
-        deleteExercise.style.display = 'none';
         exerciseInput.style.display = 'block';
     })
 
     deleteExercise.addEventListener('click', () => {
-        createExercise.style.display = 'none';
-        deleteExercise.style.display = 'none';
         deleteE.style.display = 'block';
     })
 }
