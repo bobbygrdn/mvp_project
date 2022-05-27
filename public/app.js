@@ -29,6 +29,12 @@ const exercise = document.querySelector('.exercise');
 
 //Helper variable
 let currentId = 0;
+let addWorkoutShow = false;
+let dropWorkoutShow = false;
+let addDateShow = false;
+let dropDateShow = false;
+let addExerciseShow = false;
+let dropExerciseShow = false;
 
 const startUp = () => {
     startData();
@@ -75,8 +81,15 @@ const buttonDev = () => {
 
     //User Profile Add Exercise button
     addExercise.addEventListener('click', () => {
-        workoutInput.style.display = 'block';
-        deleteWorkout.style.display = 'none';
+        if(addWorkoutShow) {
+            workoutInput.style.display = 'block';
+            deleteWorkout.style.display = 'none';
+            addWorkoutShow = true;
+        } else if(addWorkoutShow === true) {
+            workoutInput.style.display = 'none';
+            deleteWorkout.style.display = 'none';
+        }
+
     })
 
     //User Profile Drop Exercise button
