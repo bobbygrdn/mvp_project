@@ -530,6 +530,7 @@ const createLogItem = (elem) => {
     <h2>${elem.calendar_id}</h2>
     <h3>${elem.month} ${elem.day} ${elem.year}
     `; 
+    div.className = 'calendar_dates'
     historyLog.appendChild(div)
 };
 

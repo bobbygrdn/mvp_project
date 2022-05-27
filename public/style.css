@@ -150,6 +150,11 @@ h2 {
     display: none;
 }
 
+.historylog {
+    display: inline-flex;
+    flex-direction: column;
+}
+
 #history_input {
     display: none;
 }
@@ -209,4 +214,12 @@ h2 {
     border: 1px solid black;
     padding: 1em;
     border-radius: 5px;
+}
+
+.calendar_dates {
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 5px;
+    width: auto;
+    
 }
