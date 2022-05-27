@@ -237,7 +237,7 @@ const changeWorkoutForm = (form) => {
     .then(() => {
         console.log('Changed Exercise')
     })
-    exercise.innerHTML = '';
+    // exercise.innerHTML = '';
     workout();
 };
 
