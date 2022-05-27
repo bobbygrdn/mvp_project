@@ -187,6 +187,13 @@ const workout = async () => {
     createList(result);
 }
 
+const workoutAgain = async () => {
+    exercise.innerHTML = '';
+    const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/workout')
+    const result = await data.json()
+    createList(result);
+}
+
 const createList = (arr) => {
     arr.forEach((elem) => [
         createListItem(elem)
@@ -251,7 +258,7 @@ const changeWorkoutForm = (form) => {
     .then(() => {
         console.log('Changed Exercise')
     })
-    workout();
+    workoutAgain();
 };
 
 //Exercise List Change Exercise Form
@@ -292,7 +299,7 @@ const changeExerciseInput = (form) => {
     .then(() => {
         console.log('Exercise Changed!');
     })
-    exerciseList();
+    exerciseListAgain();
 };
 
 //Calendar Create Date Form
@@ -328,7 +335,7 @@ const historyForm = (form) => {
     })
     addDate.style.display = 'inline-block';
     dropDate.style.display = 'inline-block';
-    log();
+    logAgain();
 };
 
 //Calendar Delete Day Form
@@ -358,7 +365,7 @@ const deleteDay = (form) => {
     addDate.style.display = 'inline-block';
     dropDate.style.display = 'inline-block';
     dropHistory.style.display = 'none';
-    log();
+    logAgain();
 };
 
 //Exercise List Add Exercise Form
@@ -400,7 +407,7 @@ const exerciseForm = (form) => {
     })
     createExercise.style.display = 'inline-block';
     deleteExercise.style.display= 'inline-block';
-    exerciseList();
+    exerciseListAgain();
 }
 
 //Exercise List Delete Exercise Form
@@ -431,7 +438,7 @@ const deleteEx = (form) => {
     createExercise.style.display = 'inline-block';
     deleteExercise.style.display = 'inline-block';
     deleteE.style.display = 'none';
-    exerciseList();
+    exerciseListAgain();
 }
 
 //User Profile Create Exercise
@@ -470,7 +477,7 @@ const workoutForm = (form) => {
         })
         addExercise.style.display = 'inline-block';
         dropExercise.style.display = 'inline-block';
-        workout();
+        workoutAgain();
 };
 
 //User Profile Drop Exercise
@@ -501,11 +508,18 @@ const deleteW = (form) => {
     addExercise.style.display = 'inline-block';
     dropExercise.style.display = 'inline-block';
     deleteWorkout.style.display = 'none';
-    workout();
+    workoutAgain();
 };
 
 //Calendar Creation
 const log = async () => {
+    historyLog.innerHTML = '';
+    const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/calendar')
+    const result = await data.json()
+    createLog(result);
+}
+
+const logAgain = async () => {
     historyLog.innerHTML = '';
     const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/calendar')
     const result = await data.json()
@@ -531,6 +545,13 @@ const createLogItem = (elem) => {
 
 //Exercise List Creation
 const exerciseList = async () => {
+    exerciseListItems.innerHTML = '';
+    const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/exercise')
+    const result = await data.json()
+    createExerciseList(result);
+}
+
+const exerciseListAgain = async () => {
     exerciseListItems.innerHTML = '';
     const data = await fetch('https://desolate-reef-75349.herokuapp.com/api/exercise')
     const result = await data.json()
