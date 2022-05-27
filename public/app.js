@@ -565,7 +565,7 @@ const createExerciseListItem = (elem) => {
             changeExerciseShow = false;
          }
     })
-    exerciseItems.appendChild(div)
+    exerciseListItems.appendChild(div)
 }
   
 startUp();
