@@ -231,6 +231,7 @@ const changeExerciseInput = (form) => {
     .then(() => {
         console.log('Exercise Changed!');
     })
+    exerciseItems.innerHTML = '';
     exerciseList();
 };
 
@@ -267,6 +268,7 @@ const historyForm = (form) => {
     })
     addDate.style.display = 'inline-block';
     dropDate.style.display = 'inline-block';
+    history.innerHTML = '';
     log();
 };
 
@@ -297,6 +299,7 @@ const deleteDay = (form) => {
     addDate.style.display = 'inline-block';
     dropDate.style.display = 'inline-block';
     dropHistory.style.display = 'none';
+    history.innerHTML = '';
     log();
 };
 
@@ -339,6 +342,7 @@ const exerciseForm = (form) => {
     })
     createExercise.style.display = 'inline-block';
     deleteExercise.style.display= 'inline-block';
+    exerciseItems.innerHTML = '';
     exerciseList();
 }
 
@@ -369,6 +373,7 @@ const deleteEx = (form) => {
     createExercise.style.display = 'inline-block';
     deleteExercise.style.display = 'inline-block';
     deleteE.style.display = 'none';
+    exerciseItems.innerHTML = '';
     exerciseList();
 }
 
