@@ -412,7 +412,7 @@ const deleteEx = (form) => {
     form.exercise_name.value = '';
 
     let data = {
-        exercise_id: `${exercise_id}`
+        exercise_name: `${exercise_name}`
     }
 
     let fetchData = {
