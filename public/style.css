@@ -180,6 +180,7 @@ h2 {
 
 #deleteExercise {
     display: none;
+    width: auto;
 }
 
 #change_workout_input {
