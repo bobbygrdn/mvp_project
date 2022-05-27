@@ -19,6 +19,7 @@ const deleteE = document.querySelector('#drop_exercise');
 const changeWorkout = document.querySelector('#change_workout_input');
 const changeExercise = document.querySelector('#change_exercise');
 
+
 //Containers
 const history = document.querySelector('.history');
 const exerciseItems = document.querySelector('.exerciseItems');
@@ -27,6 +28,8 @@ const workouts = document.querySelector('.workouts');
 const user = document.querySelector('.user');
 const exercise = document.querySelector('.exercise');
 const historyLog = document.querySelector('.historylog')
+
+const exerciseListItems = document.querySelector('.exerciseListItems')
 
 //Helper variables
 let currentId = 0;
@@ -211,7 +214,6 @@ const createListItem = (elem) => {
 //Form Helper Functions
 
 //User Profile Edit Exercises Form
-
 const changeWorkoutForm = (form) => {
     changeWorkout.style.display = 'none';
     let exercise_id = currentId;
@@ -250,6 +252,7 @@ const changeWorkoutForm = (form) => {
     workout();
 };
 
+//Exercise List Change Exercise Form
 const changeExerciseInput = (form) => {
     changeExercise.style.display = 'none';
     let exercise_id = currentId;
@@ -287,7 +290,7 @@ const changeExerciseInput = (form) => {
     .then(() => {
         console.log('Exercise Changed!');
     })
-    exerciseItems.innerHTML = '';
+    exerciseListItems.innerHTML = '';
     exerciseList();
 };
 
