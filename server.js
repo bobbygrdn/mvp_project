@@ -258,10 +258,10 @@ app.patch("/api/exercise/:id", async (req,res) => {
     } 
 })
 
-app.delete("/api/exercise/:id", async (req,res) => {
-    let id = req.params.id;
+app.delete("/api/exercise/:exercise_name", async (req,res) => {
+    let name = req.params.exercise_name;
     try {
-        const data = await db.query(`DELETE FROM exercise WHERE exercise_id = '${id}'`)
+        const data = await db.query(`DELETE FROM exercise WHERE exercise_name = '${name}'`)
         res.send("Deleted Exercise")
     } catch (err) {
         console.error(err.message)

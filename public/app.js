@@ -407,8 +407,8 @@ const exerciseForm = (form) => {
 
 //Exercise List Delete Exercise Form
 const deleteEx = (form) => {
-    let exercise_id = form.exercise_id.value;
-    const dropurl = `https://desolate-reef-75349.herokuapp.com/api/exercise/${exercise_id}`
+    let exercise_name = form.exercise_name.value;
+    const dropurl = `https://desolate-reef-75349.herokuapp.com/api/exercise/${exercise_name}`
 
     form.exercise_id.value = '';
 
@@ -548,7 +548,6 @@ const createExerciseListItem = (elem) => {
     const div = document.createElement('div');
     div.id = elem.exercise_id;
     div.innerHTML = `
-    <h2>${elem.exercise_id}</h2>
     <h3>Exercise Name: ${elem.exercise_name}</h3>
     <h3>Exercise Type: ${elem.type_of}</h3>
     <h3>Muscle Group(s): ${elem.muscle_group}</h3>
