@@ -104,8 +104,6 @@ const buttonDev = () => {
             deleteWorkout.style.display = 'none';
             dropWorkoutShow = false;
         }
-        deleteWorkout.style.display = 'block';
-        workoutInput.style.display = 'none';
     })
 
     //Calendar Add Date button
