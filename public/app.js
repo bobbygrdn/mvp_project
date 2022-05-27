@@ -27,7 +27,7 @@ const workouts = document.querySelector('.workouts');
 const user = document.querySelector('.user');
 const exercise = document.querySelector('.exercise');
 
-//Helper variable
+//Helper variables
 let currentId = 0;
 let addWorkoutShow = false;
 let dropWorkoutShow = false;
