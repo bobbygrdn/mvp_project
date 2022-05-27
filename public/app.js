@@ -189,6 +189,7 @@ const changeWorkoutForm = (form) => {
     .then(() => {
         alert('Exercise Changed!');
     })
+    exercise.innerHTML = '';
     workout();
 };
 
@@ -406,6 +407,7 @@ const workoutForm = (form) => {
         })
         addExercise.style.display = 'inline-block';
         dropExercise.style.display = 'inline-block';
+        exercise.innerHTML = '';
         workout();
 };
 
@@ -437,6 +439,7 @@ const deleteW = (form) => {
     addExercise.style.display = 'inline-block';
     dropExercise.style.display = 'inline-block';
     deleteWorkout.style.display = 'none';
+    exercise.innerHTML = '';
     workout();
 };
 
