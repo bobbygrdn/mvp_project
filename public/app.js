@@ -409,7 +409,7 @@ const deleteEx = (form) => {
     let exercise_name = form.exercise_name.value;
     const dropurl = `https://desolate-reef-75349.herokuapp.com/api/exercise/${exercise_name}`
 
-    form.exercise_id.value = '';
+    form.exercise_name.value = '';
 
     let data = {
         exercise_id: `${exercise_id}`
