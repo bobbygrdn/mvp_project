@@ -355,7 +355,7 @@ const deleteDay = (form) => {
     addDate.style.display = 'inline-block';
     dropDate.style.display = 'inline-block';
     dropHistory.style.display = 'none';
-    history.innerHTML = '';
+    historyLog.innerHTML = '';
     log();
 };
 
