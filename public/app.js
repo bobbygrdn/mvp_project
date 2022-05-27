@@ -35,6 +35,7 @@ let addDateShow = false;
 let dropDateShow = false;
 let addExerciseShow = false;
 let dropExerciseShow = false;
+let changeWorkoutShow = false;
 
 const startUp = () => {
     startData();
@@ -194,7 +195,11 @@ const createListItem = (elem) => {
     div.style.cursor = 'pointer'
     div.addEventListener('click', (e) => {
         currentId = e.currentTarget.id;
-        changeWorkout.style.display = 'block'
+        if(changeWorkoutShow === false) {
+            changeWorkout.style.display = 'block'
+        } else if(changeWorkoutShow === true) {
+            changeWorkout.style.display = 'none'
+        }
 });
     exercise.appendChild(div)
 };
@@ -237,7 +242,7 @@ const changeWorkoutForm = (form) => {
     .then(() => {
         console.log('Changed Exercise')
     })
-    // exercise.innerHTML = '';
+    exercise.innerHTML = '';
     workout();
 };
 
@@ -547,7 +552,11 @@ const createExerciseListItem = (elem) => {
      div.style.cursor = 'pointer'
      div.addEventListener('click', (e) => {
          currentId = e.currentTarget.id;
-         changeExercise.style.display = 'block';
+         if(changeExerciseShow === false) {
+            changeExercise.style.display = 'block';
+         } else if(changeExerciseShow == true) {
+            changeExercise.style.display = 'none';
+         }
     })
     exerciseItems.appendChild(div)
 }
