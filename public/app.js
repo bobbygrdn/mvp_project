@@ -198,8 +198,10 @@ const createListItem = (elem) => {
         currentId = e.currentTarget.id;
         if(changeWorkoutShow === false) {
             changeWorkout.style.display = 'block'
+            changeWorkoutShow = true;
         } else if(changeWorkoutShow === true) {
             changeWorkout.style.display = 'none'
+            changeWorkoutShow = false;
         }
 });
     exercise.appendChild(div)
@@ -555,8 +557,10 @@ const createExerciseListItem = (elem) => {
          currentId = e.currentTarget.id;
          if(changeExerciseShow === false) {
             changeExercise.style.display = 'block';
+            changeExerciseShow = true;
          } else if(changeExerciseShow == true) {
             changeExercise.style.display = 'none';
+            changeExerciseShow = false;
          }
     })
     exerciseItems.appendChild(div)
