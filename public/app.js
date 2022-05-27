@@ -108,26 +108,54 @@ const buttonDev = () => {
 
     //Calendar Add Date button
     addDate.addEventListener('click', () => {
-        dropHistory.style.display = 'none';
-        historyInput.style.display = 'block';
+        if(addDateShow === false){
+            dropHistory.style.display = 'none';
+            historyInput.style.display = 'block';
+            addDateShow = true;
+        } else if(addDateShow === true) {
+            dropHistory.style.display = 'none';
+            historyInput.style.display = 'none';
+            addDateShow = false;
+        }
     })
 
     //Calendar Drop Date button
     dropDate.addEventListener('click', () => {
-        dropHistory.style.display = 'block';
-        historyInput.style.display = 'none';
+        if(dropDateShow === false){
+            dropHistory.style.display = 'block';
+            historyInput.style.display = 'none';
+            dropDateShow = true;
+        } else if(dropDateShow === true) {
+            dropHistory.style.display = 'none';
+            historyInput.style.display = 'none';
+            dropDateShow = false;
+        }
     })
 
     //Exercise List Add Exercise button
     createExercise.addEventListener('click', () => {
-        exerciseInput.style.display = 'block';
-        deleteE.style.display = 'none';
+        if(addExerciseShow === false) {
+            exerciseInput.style.display = 'block';
+            deleteE.style.display = 'none';
+            addExerciseShow = true;
+        } else if(addExerciseShow === true) {
+            exerciseInput.style.display = 'none';
+            deleteE.style.display = 'none';
+            addExerciseShow = false;
+        }
     })
 
     //Exercise List Drop Exercise button
     deleteExercise.addEventListener('click', () => {
-        deleteE.style.display = 'block';
-        exerciseInput.style.display = 'none';
+        if(dropExerciseShow === false) {
+            exerciseInput.style.display = 'none';
+            deleteE.style.display = 'block';
+            dropExerciseShow = true;
+        } else if(dropExerciseShow === true) {
+            exerciseInput.style.display = 'none';
+            deleteE.style.display = 'none';
+            dropExerciseShow = false;
+        }
     })
 }
 
