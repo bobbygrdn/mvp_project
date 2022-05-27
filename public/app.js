@@ -25,6 +25,7 @@ const exerciseItems = document.querySelector('.exerciseItems');
 const currentplan = document.querySelector('.currentplan');
 const workouts = document.querySelector('.workouts');
 const user = document.querySelector('.user');
+const exercise = document.querySelector('.exercise');
 
 //Helper variables
 let currentId = 0;
@@ -147,7 +148,7 @@ const createListItem = (elem) => {
     div.addEventListener('click', () => {
         changeWorkout.style.display = 'block'
 });
-    workouts.appendChild(div)
+    exercise.appendChild(div)
 };
 
 //Form Helper Functions
