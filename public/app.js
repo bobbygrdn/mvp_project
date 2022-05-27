@@ -26,6 +26,7 @@ const currentplan = document.querySelector('.currentplan');
 const workouts = document.querySelector('.workouts');
 const user = document.querySelector('.user');
 const exercise = document.querySelector('.exercise');
+const historyLog = document.querySelector('.historylog')
 
 //Helper variables
 let currentId = 0;
@@ -524,7 +525,7 @@ const createLogItem = (elem) => {
     <h2>${elem.calendar_id}</h2>
     <h3>${elem.month} ${elem.day} ${elem.year}
     `; 
-    history.appendChild(div)
+    historyLog.appendChild(div)
 };
 
 //Exercise List Creation
