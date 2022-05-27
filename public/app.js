@@ -27,7 +27,7 @@ const workouts = document.querySelector('.workouts');
 const user = document.querySelector('.user');
 const exercise = document.querySelector('.exercise');
 
-//Helper variables
+//Helper variable
 let currentId = 0;
 
 const startUp = () => {
@@ -43,7 +43,8 @@ const startData = () => {
 }
 
 const buttonDev = () => {
-
+    
+    //Calendar button
     calendar.addEventListener('click', () => {
         currentplan.style.display = 'none';
         workouts.style.display = 'none';
@@ -52,6 +53,7 @@ const buttonDev = () => {
         history.style.display = 'block';
     })
 
+    //Exercise List button
     list.addEventListener('click', () => {
         currentplan.style.display = 'none';
         workouts.style.display = 'none';
@@ -62,6 +64,7 @@ const buttonDev = () => {
         exerciseItems.style.display = 'block';
     })
 
+    //User Profile button
     profile.addEventListener('click', () => {
         currentplan.style.display = 'block';
         workouts.style.display = 'block';
@@ -70,26 +73,34 @@ const buttonDev = () => {
         exerciseItems.style.display = 'none';
     })
 
+    //User Profile Add Exercise button
     addExercise.addEventListener('click', () => {
         workoutInput.style.display = 'block';
     })
 
+    //User Profile Drop Exercise button
     dropExercise.addEventListener('click', () => {
         deleteWorkout.style.display = 'block';
     })
 
+    //Calendar Add Date button
     addDate.addEventListener('click', () => {
+        dropHistory.style.display = 'none';
         historyInput.style.display = 'block';
     })
 
+    //Calendar Drop Date button
     dropDate.addEventListener('click', () => {
         dropHistory.style.display = 'block';
+        historyInput.style.display = 'none';
     })
 
+    //Exercise List Add Exercise button
     createExercise.addEventListener('click', () => {
         exerciseInput.style.display = 'block';
     })
 
+    //Exercise List Drop Exercise button
     deleteExercise.addEventListener('click', () => {
         deleteE.style.display = 'block';
     })
