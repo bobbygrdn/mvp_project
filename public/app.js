@@ -140,6 +140,7 @@ const buttonDev = () => {
 
     //Exercise List Add Exercise button
     createExercise.addEventListener('click', () => {
+        dropExercise.style.display = 'none';
         if(addExerciseShow === false) {
             exerciseInput.style.display = 'block';
             deleteE.style.display = 'none';
@@ -153,6 +154,7 @@ const buttonDev = () => {
 
     //Exercise List Drop Exercise button
     deleteExercise.addEventListener('click', () => {
+        dropExercise.style.display = 'none';
         if(dropExerciseShow === false) {
             exerciseInput.style.display = 'none';
             deleteE.style.display = 'block';
