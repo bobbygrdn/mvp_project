@@ -76,11 +76,13 @@ const buttonDev = () => {
     //User Profile Add Exercise button
     addExercise.addEventListener('click', () => {
         workoutInput.style.display = 'block';
+        deleteWorkout.style.display = 'none';
     })
 
     //User Profile Drop Exercise button
     dropExercise.addEventListener('click', () => {
         deleteWorkout.style.display = 'block';
+        workoutInput.style.display = 'none';
     })
 
     //Calendar Add Date button
@@ -98,11 +100,13 @@ const buttonDev = () => {
     //Exercise List Add Exercise button
     createExercise.addEventListener('click', () => {
         exerciseInput.style.display = 'block';
+        deleteE.style.display = 'none';
     })
 
     //Exercise List Drop Exercise button
     deleteExercise.addEventListener('click', () => {
         deleteE.style.display = 'block';
+        exerciseInput.style.display = 'none';
     })
 }
 
