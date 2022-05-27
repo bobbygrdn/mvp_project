@@ -152,6 +152,7 @@ h2 {
 
 .historylog {
     display: inline-flex;
+    flex-wrap: wrap;
 }
 
 #history_input {
