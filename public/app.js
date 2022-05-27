@@ -36,6 +36,7 @@ let dropDateShow = false;
 let addExerciseShow = false;
 let dropExerciseShow = false;
 let changeWorkoutShow = false;
+let changeExerciseShow = false;
 
 const startUp = () => {
     startData();
