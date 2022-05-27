@@ -324,7 +324,7 @@ const historyForm = (form) => {
     })
     addDate.style.display = 'inline-block';
     dropDate.style.display = 'inline-block';
-    history.innerHTML = '';
+    historyLog.innerHTML = '';
     log();
 };
 
