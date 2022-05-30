@@ -411,6 +411,10 @@ app.delete("/api/exercise_list/:id", async (req,res) => {
     }
 })
 
+app.use((req,res,next) => {
+    res.status(500).send("Internal Server Error")
+})
+
 app.listen(process.env.PORT, () => {
     console.log(`Running on ${process.env.PORT}`)
 })
